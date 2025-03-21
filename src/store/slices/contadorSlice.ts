@@ -23,11 +23,17 @@ const contadorSlice = createSlice({
     adicionarValor: (state, action: PayloadAction<number>) => {
       state.valor += action.payload;
     },
+    adicionaVezes:(state) => {
+      state.valor *= 2;
+    },
+    dividir: (state) => {
+      state.valor /= 2
+    }
   },
 });
 
 // Exportando as ações
-export const { incrementar, decrementar, adicionarValor } = contadorSlice.actions;
+export const { incrementar, decrementar, adicionarValor, adicionaVezes , dividir} = contadorSlice.actions;
 
 // Exportando o reducer
 export default contadorSlice.reducer;

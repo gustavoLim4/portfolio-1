@@ -4,6 +4,8 @@ import {
   incrementar,
   decrementar,
   adicionarValor,
+  adicionaVezes,
+  dividir
 } from "./store/slices/contadorSlice";
 
 import { toggleTheme } from "./store/slices/themeSlice";
@@ -37,6 +39,18 @@ function App() {
           onClick={() => dispatch(adicionarValor(10))}
         >
           Adicionar 10
+        </button>
+        <button
+          className="px-4 py-2 bg-green-500 text-white rounded"
+          onClick={() => dispatch(adicionaVezes())}
+        >
+        Adicionar x2
+        </button>
+        <button
+          className="px-4 py-2 bg-green-500 text-white rounded"
+          onClick={() => dispatch(dividir())}
+        >
+        divisão 2
         </button>
       </div>
       <div
