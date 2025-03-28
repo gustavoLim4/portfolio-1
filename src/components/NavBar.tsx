@@ -3,6 +3,8 @@ import { RootState, AppDispatch } from "../store/store";
 import { TrocaCor } from "../store/slices/themeSlice";
 import logoClara from "../img/loco-claro.png";
 import logoEscura from "../img/logo-escuro.png";
+import { MdOutlineDarkMode } from "react-icons/md";
+import { MdOutlineLightMode } from "react-icons/md";
 
 const NavBar = () => {
     const dispatch = useDispatch<AppDispatch>();
@@ -18,8 +20,8 @@ const NavBar = () => {
     const claro: Tema = {
 
         bgColor: "bg-[#ffffff]",
-        textColor: "text-[#7f5af0] hover:text-[#a48bee] text-xl  px-6 py-2",
-        buttonBg: "bg-[#7f5af0] text-[#fff] py-1 px-3 rounded-lg",
+        textColor: "text-[#7f5af0] hover:text-[#a48bee] text-xl  px-6 py-2 ",
+        buttonBg: "w-10 h-10 text-[#7f5af0] border-2 p-1 rounded-full"
 
     };
 
@@ -27,16 +29,18 @@ const NavBar = () => {
     const escuro: Tema = {
 
         bgColor: "bg-[#000]",
-        textColor: "text-[#0400ff] hover:text-[#fff] text-xl  px-6 py-2",
-        buttonBg: "bg-[#0400ff] text-[#fff] py-1 px-3 rounded-lg",
+        textColor: "text-[#0400ff] hover:text-[#fff] text-xl  px-6 py-2 ",
+        buttonBg: "w-10 h-10 text-[#0400ff] border-2 p-1 rounded-full",
 
     };
+
+    
 
     return (
         <nav>
             {/* Aplica as classes do tema de acordo com o darkMode */}
             <div className={`${darkMode ? claro.bgColor : escuro.bgColor} transition duration-300 ease-in-out`}>
-                <div className="flex items-center justify-between py-5 px-30">
+                <div className="flex items-center justify-between py-5 px-30 ">
                     <img
                         src={darkMode ? logoClara : logoEscura}
                         alt="Logo"
@@ -70,9 +74,10 @@ const NavBar = () => {
                                 Contact
                             </a>
                         </div>
-                        <div className={`${darkMode ? claro.buttonBg : escuro.buttonBg}`}>
-                            <button onClick={() => dispatch(TrocaCor())}>
-                                Modo
+                        <div className="">
+                            <button onClick={
+                                () => dispatch(TrocaCor())} >
+                                {darkMode ?  <MdOutlineLightMode  className={claro.buttonBg}/> : <MdOutlineDarkMode className={escuro.buttonBg}/>}
                             </button>
                         </div>
                     </div>
