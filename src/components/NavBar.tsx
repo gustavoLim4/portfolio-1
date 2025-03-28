@@ -16,16 +16,20 @@ const NavBar = () => {
 
     // Definindo o tema claro
     const claro: Tema = {
+
         bgColor: "bg-[#ffffff]",
         textColor: "text-[#7f5af0] hover:text-[#a48bee] text-xl  px-6 py-2",
         buttonBg: "bg-[#7f5af0] text-[#fff] py-1 px-3 rounded-lg",
+
     };
 
     // Definindo o tema escuro
     const escuro: Tema = {
+
         bgColor: "bg-[#000]",
         textColor: "text-[#0400ff] hover:text-[#fff] text-xl  px-6 py-2",
         buttonBg: "bg-[#0400ff] text-[#fff] py-1 px-3 rounded-lg",
+
     };
 
     return (
@@ -36,7 +40,7 @@ const NavBar = () => {
                     <img
                         src={darkMode ? logoClara : logoEscura}
                         alt="Logo"
-                        className="h-20 w-20"
+                        className="w-50  transition duration-300 ease-in-out"
                     />
 
                     <div className="flex items-center gap-10">
