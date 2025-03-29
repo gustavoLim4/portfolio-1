@@ -1,6 +1,6 @@
 
-import {Aprecentacao}  from './components/Aprecentacao'
-import NavBar from './components/NavBar'
+import {Aprecentacao}  from './components/Apresentacao/Apresentacao'
+import NavBar from './components/NavBar/NavBar'
 
 export const App = () => {
   return (

@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
-import { RootState, AppDispatch } from "../store/store";
-import { TrocaCor } from "../store/slices/themeSlice";
-import logoClara from "../img/loco-claro.png";
-import logoEscura from "../img/logo-escuro.png";
+import { RootState, AppDispatch } from "../../store/store";
+import { TrocaCor } from "../../store/slices/themeSlice";
+import logoClara from "../../img/loco-claro.png"
+import logoEscura from "../../img/logo-escuro.png";
 import { MdOutlineDarkMode } from "react-icons/md";
 import { MdOutlineLightMode } from "react-icons/md";
 
@@ -34,18 +34,20 @@ const NavBar = () => {
 
     };
 
-    
+
 
     return (
         <nav>
             {/* Aplica as classes do tema de acordo com o darkMode */}
             <div className={`${darkMode ? claro.bgColor : escuro.bgColor} transition duration-300 ease-in-out`}>
                 <div className="flex items-center justify-between py-5 px-30 ">
-                    <img
-                        src={darkMode ? logoClara : logoEscura}
-                        alt="Logo"
-                        className="w-50  transition duration-300 ease-in-out"
-                    />
+                    <a href="#">
+                        <img
+                            src={darkMode ? logoClara : logoEscura}
+                            alt="Logo"
+                            className="w-50  transition duration-300 ease-in-out"
+                        />
+                    </a>
 
                     <div className="flex items-center gap-10">
                         <div>
@@ -77,7 +79,7 @@ const NavBar = () => {
                         <div className="">
                             <button onClick={
                                 () => dispatch(TrocaCor())} >
-                                {darkMode ?  <MdOutlineLightMode  className={claro.buttonBg}/> : <MdOutlineDarkMode className={escuro.buttonBg}/>}
+                                {darkMode ? <MdOutlineLightMode className={claro.buttonBg} /> : <MdOutlineDarkMode className={escuro.buttonBg} />}
                             </button>
                         </div>
                     </div>
