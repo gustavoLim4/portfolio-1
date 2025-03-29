@@ -1,6 +1,7 @@
 
-import {Aprecentacao}  from './components/Apresentacao/Apresentacao'
+import { Aprecentacao } from './components/Apresentacao/Apresentacao'
 import NavBar from './components/NavBar/NavBar'
+import { Skills } from './components/skills/Skills'
 
 export const App = () => {
   return (
@@ -10,6 +11,9 @@ export const App = () => {
       </section>
       <section>
         <Aprecentacao />
+      </section>
+      <section>
+        <Skills />
       </section>
     </main>
   )
