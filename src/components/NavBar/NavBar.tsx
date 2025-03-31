@@ -12,7 +12,7 @@ const NavBar: React.FC = () => {
     const [fixaNav, setFixaNva] = useState(false);
 
     useEffect(() => {
-        const handleScroll = () => {
+        const NavScroll = () => {
             if (window.scrollY > 50) {
                 setFixaNva(true);
             } else {
@@ -20,8 +20,8 @@ const NavBar: React.FC = () => {
             }
         };
 
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
+        window.addEventListener("scroll", NavScroll);
+        return () => window.removeEventListener("scroll", NavScroll);
     }, []);
 
     interface Tema {
