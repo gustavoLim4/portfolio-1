@@ -33,13 +33,13 @@ const NavBar: React.FC = () => {
     const claro: Tema = {
         bgColor: "bg-[#fff] shadow-[0px_5px_15px_rgba(1,0,0,0.1)]",
         textColor: "text-[#7f5af0] hover:text-[#a48bee] text-xl px-6 py-2",
-        buttonBg: "w-10 h-10 text-[#1f1f1f] border-2 p-1 rounded-full"
+        buttonBg: "w-10 h-10 text-[#1f1f1f] p-1 rounded-full"
     };
 
     const escuro: Tema = {
         bgColor: "bg-[#1f1f1f] shadow-[0px_5px_15px_rgba(255,255,255,0.1)]",
         textColor: "text-[#0400ff] hover:text-[#fff] text-xl px-6 py-2",
-        buttonBg: "w-10 h-10 text-[#fff] border-2 p-1 rounded-full"
+        buttonBg: "w-10 h-10 text-[#fff] p-1 rounded-full"
     };
 
     return (
