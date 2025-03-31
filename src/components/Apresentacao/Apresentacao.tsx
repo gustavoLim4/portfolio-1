@@ -1,47 +1,60 @@
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/store";
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 export const Aprecentacao: React.FC = () => {
     const darkMode = useSelector((state: RootState) => state.theme.darkMode);
 
     interface Tema {
-        devCaixa: string
         bgColor: string;
         textColor: string;
+        textColor2: string;
         buttonBg: string;
         apresentar: string;
+        githubButton: string;
+        linkedinButton: string;
     }
 
     // Definindo o tema claro
     const claro: Tema = {
-        devCaixa: "text-[#fff] font-bold tracking-wide px-2 py-1 bg-gradient-to-r from-[#7f5af0] to-[#0400ff] border-white/50 text-[20px] rounded-2xl",
         bgColor: "bg-[#fff] py-10",
-        textColor: "text-7xl text-[#7f5af0]",
-        apresentar: "text-3xl text-center text-[#000]",
-        buttonBg: "text-3xl bg-[#7f5af0] py-3  text-[#fff] px-10 rounded-2xl flex items-center"
-
+        textColor: "text-7xl flex w-full text-[#1f1f1f]",
+        textColor2: "text-7xl text-[#7f5af0] flex justify-end mr-15",
+        apresentar: "text-3xl text-[#000]",
+        buttonBg: "text-3xl bg-[#7f5af0] py-3  text-[#fff] px-10 rounded-2xl flex items-center",
+        githubButton : "text-[#7f5af0] h-15 w-15",
+        linkedinButton: "text-[#7f5af0] h-15 w-15 "
     };
     const escuro: Tema = {
-        devCaixa: "text-[#fff] font-bold tracking-wide px-2 py-1 bg-gradient-to-r from-[#0400ff] to-[#7f5af0] border-white/50 text-[20px] rounded-2xl",
         bgColor: "bg-[#1f1f1f] py-10",
-        textColor: "text-7xl text-[#0400ff] ",
-        apresentar: "text-3xl text-center text-[#fff]",
-        buttonBg: "text-3xl bg-[#0400ff] py-3  text-[#fff] px-10 rounded-2xl flex items-center"
+        textColor: "text-7xl text-[#fff] flex w-full",
+        textColor2: "text-7xl text-[#0400ff] flex justify-end mr-15",
+        apresentar: "text-3xl text-[#fff]",
+        buttonBg: "text-3xl bg-[#0400ff] py-3  text-[#fff] px-10 rounded-2xl flex items-center",
+        githubButton: "text-[#0400ff] h-15 w-15 ",
+        linkedinButton: "text-[#0400ff] h-15 w-15 "
     };
 
     return (
         <main >
             <div className={`${darkMode ? claro.bgColor : escuro.bgColor} transition duration-300 ease-in-out`}>
-                <div className="w-1/2 p-10 flex flex-col items-center gap-10">
-                    <h1 className={darkMode ? claro.textColor : escuro.textColor}>Gustavo Lima Dev.</h1>
-                    <span className={darkMode ? claro.devCaixa : escuro.devCaixa}>Welcome to my Portfolio</span>
+                <div className="w-1/2 p-10 flex flex-col gap-8">
+                    <div className="flex flex-col gap-1 ">
+                        <div>
+                            <h1 className={darkMode ? claro.textColor : escuro.textColor}>Gustavo Lima</h1>
+                        </div>
+                        <div>
+                            <h1 className={darkMode ? claro.textColor2 : escuro.textColor2}>Dev front-end</h1>
+                        </div>
+                    </div>
+
                     <h3 className={darkMode ? claro.apresentar : escuro.apresentar}>
-                        Olá! Sou um desenvolvedor Front-End Jr. apaixonado por
-                        criar interfaces incríveis. Explore meu trabalho e veja minhas criações!</h3>
+                        Olá! Bem-vindo ao meu portfólio. Sinta-se à vontade para explorar!</h3>
                     <div className="gap-5 flex ">
                         <a href="#" className={darkMode ? claro.buttonBg : escuro.buttonBg}>Projetos</a>
-                        <a href="#" className={darkMode ? claro.buttonBg : escuro.buttonBg}>Curriculo</a>
-
+                        <a href="#" className="flex items-end"><FaLinkedin  className={darkMode ? claro.linkedinButton : escuro.linkedinButton}/></a>
+                        <a href="#" className="flex items-end"><FaGithub className={darkMode ? claro.githubButton : escuro.githubButton}/></a>
                     </div>
                 </div>
                 <div>
