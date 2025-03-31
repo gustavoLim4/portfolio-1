@@ -9,14 +9,14 @@ import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 const NavBar: React.FC = () => {
     const dispatch = useDispatch<AppDispatch>();
     const darkMode = useSelector((state: RootState) => state.theme.darkMode);
-    const [isFixed, setIsFixed] = useState(false);
+    const [fixaNav, setFixaNva] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 50) {
-                setIsFixed(true);
+                setFixaNva(true);
             } else {
-                setIsFixed(false);
+                setFixaNva(false);
             }
         };
 
@@ -43,7 +43,7 @@ const NavBar: React.FC = () => {
     };
 
     return (
-        <nav className={`${isFixed ? "fixed top-0 w-full  z-50 transition-all duration-500" : ""}`}>
+        <nav className={`${fixaNav ? "fixed top-0 w-full  z-50 transition-all duration-500" : ""}`}>
             <div className={`${darkMode ? claro.bgColor : escuro.bgColor} transition duration-300 ease-in-out`}>
                 <div className="flex items-center justify-between py-5 px-10">
                     <a href="#">
