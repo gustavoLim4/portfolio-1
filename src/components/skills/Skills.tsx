@@ -16,43 +16,52 @@ export const Skills: React.FC = () => {
 
     interface Tema {
         DivImg: string,
-        CssImg: string
+        CssImg: string,
+        corfund: string
     }
 
     const claro: Tema = {
-        DivImg: "p-2 shadow-[0px_10px_20px_#333333bd] rounded-2xl",
+        corfund: "bg-[#fff] transition duration-300 ease-in-out",
+        DivImg: "p-2 shadow-[0px_10px_20px_#333333bd] rounded-2xl bg-[#fff] transition duration-300 ease-in-out",
         CssImg: "w-50 object-contain"
     }
 
+    const escuro: Tema = {
+        corfund: "bg-[#1f1f1f] transition duration-300 ease-in-out",
+        DivImg: "p-2  shadow-[0px_5px_15px_rgba(255,255,255,0.50)] rounded-2xl transition duration-300 ease-in-out",
+        CssImg: "w-50 object-contain "
+    }
+
     return (
-        <main>
+        <main className={darkMode ? claro.corfund : escuro.corfund}>
             <h1 className={`${darkMode ? "text-[#7f5af0]" : "text-[#0400ff]"} text-5xl py-10 flex justify-center`}>Skills</h1>
             <div className="flex justify-center gap-5 my-7 mx-10">
-                <div className={claro.DivImg}>
-                    <img src={js} alt="" className={claro.CssImg} />
+                <div className={darkMode ? claro.DivImg : escuro.DivImg}>
+                    <img src={js} alt="" className={darkMode ? claro.CssImg : escuro.CssImg} />
                 </div>
-                <div className={claro.DivImg}>
-                    <img src={ts} alt="" className={claro.CssImg} />
+                <div className={darkMode ? claro.DivImg : escuro.DivImg}>
+                    <img src={ts} alt="" className={darkMode ? claro.CssImg : escuro.CssImg} />
                 </div>
 
-                <div className={claro.DivImg}>
-                    <img src={react} alt="" className={claro.CssImg} />
+                <div className={darkMode ? claro.DivImg : escuro.DivImg}>
+                    <img src={react} alt="" className={darkMode ? claro.CssImg : escuro.CssImg} />
                 </div>
-                <div className={claro.DivImg}>
-                    <img src={node} alt="" className={claro.CssImg} />
+                <div className={darkMode ? claro.DivImg : escuro.DivImg}>
+                    <img src={sass} alt="" className={darkMode ? claro.CssImg : escuro.CssImg} />
                 </div>
-                <div className={claro.DivImg}>
-                    <img src={redux} alt="" className={claro.CssImg} />
+                <div className={darkMode ? claro.DivImg : escuro.DivImg}>
+                    <img src={node} alt="" className={darkMode ? claro.CssImg : escuro.CssImg} />
                 </div>
-                <div className={claro.DivImg}>
-                    <img src={csharp} alt="" className={claro.CssImg} />
+                <div className={darkMode ? claro.DivImg : escuro.DivImg}>
+                    <img src={redux} alt="" className={darkMode ? claro.CssImg : escuro.CssImg} />
                 </div>
-                <div className={claro.DivImg}>
-                    <img src={php} alt="" className={claro.CssImg} />
+                <div className={darkMode ? claro.DivImg : escuro.DivImg}>
+                    <img src={csharp} alt="" className={darkMode ? claro.CssImg : escuro.CssImg} />
                 </div>
-                <div className={claro.DivImg}>
-                    <img src={sass} alt="" className={claro.CssImg} />
+                <div className={darkMode ? claro.DivImg : escuro.DivImg}>
+                    <img src={php} alt="" className={darkMode ? claro.CssImg : escuro.CssImg} />
                 </div>
+
             </div>
         </main >
     )
