@@ -46,7 +46,7 @@ export const Skills: React.FC = () => {
     return (
         <main className={darkMode ? claro.corfund : escuro.corfund}>
             <h1 className={`${darkMode ? claro.h1Skills : escuro.h1Skills} text-5xl py-5 flex justify-center`}>Skills</h1>
-            <Marquee speed={150}>
+            <Marquee speed={175}>
                 <div className="flex justify-center gap-5 m-3 py-10">
                     <div className={darkMode ? claro.DivImg : escuro.DivImg}>
                         <img src={html} alt="" className={darkMode ? claro.CssImg : escuro.CssImg} />
