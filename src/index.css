@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
-body {
-    color: #00000000;
+:root {
+    --branco: #ffffff;
+    --preto: #1f1f1f;
+    --roxo-principal: #7f5af0;
+    --roxo-claro: #a48bee;
+    --azul-destaque: #0400ff;
 }
