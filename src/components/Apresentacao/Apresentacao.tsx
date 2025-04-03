@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../store/store";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-import eulogo from "../../img/eu-anime.jpg"
+import eulogo from "../../img/eu-anime.png"
 
 export const Aprecentacao: React.FC = () => {
     const darkMode = useSelector((state: RootState) => state.theme.darkMode);
