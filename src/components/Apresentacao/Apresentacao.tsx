@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../store/store";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import eulogo from "../../img/eu-anime.jpg"
 
 export const Aprecentacao: React.FC = () => {
     const darkMode = useSelector((state: RootState) => state.theme.darkMode);
@@ -38,7 +39,7 @@ export const Aprecentacao: React.FC = () => {
 
     return (
         <main >
-            <div className={`${darkMode ? claro.bgColor : escuro.bgColor} transition duration-300 ease-in-out`}>
+            <div className={`${darkMode ? claro.bgColor : escuro.bgColor} transition duration-300 ease-in-out flex  `}>
                 <div className="w-1/2 p-10 flex flex-col gap-8">
                     <div className="flex flex-col gap-1 ">
                         <div>
@@ -57,8 +58,8 @@ export const Aprecentacao: React.FC = () => {
                         <a href="#" className="flex items-end"><FaGithub className={darkMode ? claro.githubButton : escuro.githubButton}/></a>
                     </div>
                 </div>
-                <div>
-
+                <div className="flex items-center">
+                    <img src={eulogo} alt="eu logo" />
                 </div>
             </div>
         </main>

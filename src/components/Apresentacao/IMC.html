@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form style="width: 100%; text-align: center">
+      <div style="display: flex; width: 100%; justify-content: center;">
+        <img
+          src="https://www.saudebemestar.pt/media/89347/obesidade.jpg"
+          alt=""
+          
+        />
+      </div>
+      <input
+        type="text"
+        id="peso"
+        placeholder="Digite seu peso Ex: 1.00"
+        style="margin: 10px; width: 45%; padding: 15px;"
+      />
+      <br />
+      <input
+        type="text"
+        id="altura"
+        placeholder="Digite sua altura Ex: 1.00"
+        style="margin: 10px; width: 45%; padding: 15px;"
+      />
+      <br />
+      <button type="submit" onclick="enviar()" style="margin: 10px; width: 10%; padding: 10px;">
+        enviar
+      </button>
+      <div id="imagem"></div>
+    </form>
+    <script>
+      function enviar() {
+        var peso = document.querySelector("#peso").value;
+        var altura = document.querySelector("#altura").value;
+        var imc = peso / (altura * altura);
+
+        var msg;
+        if (imc < 18.5) {
+          msg = "Você esta abaixo do peso";
+          document.write('<img src=""/>');
+        } else if (imc >= 18.5 && imc < 25) {
+          msg = "Seu peso esta normal (faixa saudável).";
+        } else if (imc >= 25 && imc < 30) {
+          msg = "Você está com sobrpeso";
+        } else {
+          msg = "Você está obeso";
+        }
+        document.write(
+          `Seu Indece de massa Corporal (IMC) é: ${imc.toFixed(2)} <br> ${msg}`
+        );
+      }
+    </script>
+  </body>
+</html>
