@@ -9,14 +9,14 @@ import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 const NavBar: React.FC = () => {
     const dispatch = useDispatch<AppDispatch>();
     const darkMode = useSelector((state: RootState) => state.theme.darkMode);
-    const [isFixed, setIsFixed] = useState(false);
+    const [navfixo, setNavFixo] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 50) {
-                setIsFixed(true);
+            if (window.scrollY > 20) {
+                setNavFixo(true);
             } else {
-                setIsFixed(false);
+                setNavFixo(false);
             }
         };
 
@@ -31,31 +31,37 @@ const NavBar: React.FC = () => {
     }
 
     const claro: Tema = {
-        bgColor: "bg-[#fff] shadow-[0px_5px_15px_rgba(1,0,0,0.1)]",
-        textColor: "text-[#7f5af0] hover:text-[#a48bee] text-xl px-6 py-2",
-        buttonBg: "w-10 h-10 text-[#1f1f1f] border-2 p-1 rounded-full"
+        bgColor: "bg-[#fff] shadow-[0px_5px_15px_rgba(1,0,0,0.1)] transition duration-400 ease-in-out",
+        textColor: `text-[#7f5af0] text-xl hover:text-[#a48bee] 
+        relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 
+        after:h-[2px] after:bg-[#a48bee] after:transition-all after:duration-300 hover:after:w-full`,
+
+        buttonBg: "w-10 h-10 text-[#1f1f1f]  p-1 rounded-full transition duration-400 ease-in-out hover:scale-110"
     };
 
     const escuro: Tema = {
-        bgColor: "bg-[#1f1f1f] shadow-[0px_5px_15px_rgba(255,255,255,0.1)]",
-        textColor: "text-[#0400ff] hover:text-[#fff] text-xl px-6 py-2",
-        buttonBg: "w-10 h-10 text-[#fff] border-2 p-1 rounded-full"
+        bgColor: "bg-[#1f1f1f] shadow-[0px_5px_15px_rgba(255,255,255,0.1)] transition duration-400 ease-in-out",
+        textColor: `text-[#0400ff] text-xl hover:text-[#423eff] 
+        relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 
+        after:h-[2px] after:bg-[#423eff] after:transition-all after:duration-300 hover:after:w-full`,
+        buttonBg: "w-10 h-10 text-[#fff] p-1 rounded-full hover:scale-125 transition duration-400 ease-in-out hover:scale-110"
     };
 
     return (
-        <nav className={`${isFixed ? "fixed top-0 w-full  z-50 transition-all duration-500" : ""}`}>
-            <div className={`${darkMode ? claro.bgColor : escuro.bgColor} transition duration-300 ease-in-out`}>
+        <nav className={`transition-all duration-400 ease-in-out ${navfixo ? "fixed top-0 w-full z-50 translate-y-0 shadow-lg" :""
+            }`}>
+            <div className={`${darkMode ? claro.bgColor : escuro.bgColor} transition duration-400 ease-in-out`}>
                 <div className="flex items-center justify-between py-5 px-10">
                     <a href="#">
                         <img
                             src={darkMode ? logoClara : logoEscura}
                             alt="Logo"
-                            className="w-50 transition duration-300 ease-in-out"
+                            className="w-50 transition duration-400 ease-in-out"
                         />
                     </a>
 
                     <div className="flex items-center gap-10">
-                        <div>
+                        <div className="flex gap-15">
                             <a href="#home" className={`${darkMode ? claro.textColor : escuro.textColor}`}>
                                 Home
                             </a>
