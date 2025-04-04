@@ -22,7 +22,7 @@ export const Aprecentacao: React.FC = () => {
     const claro: Tema = {
         bgColor: "bg-[#fff] py-10",
         textColor: "text-7xl flex w-full text-[#1f1f1f] transition duration-400 ease-in-out",
-        textColor2: "text-7xl text-[#7f5af0] flex justify-end mr-15 transition duration-400 ease-in-out",
+        textColor2: "text-7xl text-[#7f5af0] flex justify-end transition duration-400 ease-in-out",
         apresentar: "text-3xl text-[#000] transition duration-400 ease-in-out",
         buttonBg: "text-3xl bg-[#7f5af0] py-3  text-[#fff] px-10 rounded-2xl flex items-center transition duration-400 ease-in-out hover:bg-[#a48bee]",
         githubButton: "text-[#7f5af0] h-15 w-15 transition duration-400 ease-in-out hover:text-[#a48bee]",
@@ -31,7 +31,7 @@ export const Aprecentacao: React.FC = () => {
     const escuro: Tema = {
         bgColor: "bg-[#1f1f1f] py-10 transition duration-400 ease-in-out",
         textColor: "text-7xl text-[#fff] flex w-full transition duration-400 ease-in-out",
-        textColor2: "text-7xl text-[#0400ff] flex justify-end mr-15 transition duration-400 ease-in-out",
+        textColor2: "text-7xl text-[#0400ff] flex justify-end transition duration-400 ease-in-out",
         apresentar: "text-3xl text-[#fff] transition duration-400 ease-in-out",
         buttonBg: "text-3xl bg-[#0400ff] hover:bg-[#423eff] py-3 text-[#fff] px-10 rounded-2xl flex items-center transition duration-400 ease-in-out",
         githubButton: "text-[#0400ff] h-15 w-15 transition duration-400 ease-in-out hover:text-[#423eff]",
@@ -40,7 +40,7 @@ export const Aprecentacao: React.FC = () => {
 
     return (
         <main >
-            <div className={`${darkMode ? claro.bgColor : escuro.bgColor} transition duration-300 ease-in-out flex  `}>
+            <div className={`${darkMode ? claro.bgColor : escuro.bgColor} transition duration-300 ease-in-out flex mx-10`}>
                 <div className="w-1/2 p-10 flex flex-col gap-8">
                     <div className="flex flex-col gap-1 ">
                         <div>
@@ -59,8 +59,8 @@ export const Aprecentacao: React.FC = () => {
                         <a href="https://github.com/gustavoLim4" className="flex items-end"><FaGithub className={darkMode ? claro.githubButton : escuro.githubButton} /></a>
                     </div>
                 </div>
-                <div className="flex items-center">
-                    <img src={eulogo} alt="eu logo" />
+                <div className="w-1/2 flex justify-center">
+                    <img src={eulogo} alt="eu logo"/>
                 </div>
             </div>
         </main>
