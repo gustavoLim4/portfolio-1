@@ -1,6 +1,6 @@
 
-import { Aprecentacao } from './components/Apresentacao/Apresentacao'
-import { Estudo } from './components/estudos/Estudo'
+import Aprecentacao  from './components/Apresentacao/Apresentacao'
+import Estudo from './components/estudos/Estudo'
 import NavBar from './components/NavBar/NavBar'
 import { Skills } from './components/skills/Skills'
 

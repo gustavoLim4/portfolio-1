@@ -4,7 +4,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 import eulogo from "../../img/eu-anime.png";
 import { Typewriter } from "react-simple-typewriter";
 
-export const Aprecentacao: React.FC = () => {
+const Aprecentacao: React.FC = () => {
   const darkMode = useSelector((state: RootState) => state.theme.darkMode);
 
   interface Tema {
@@ -18,23 +18,23 @@ export const Aprecentacao: React.FC = () => {
   }
 
   const claro: Tema = {
-    bgColor: "bg-[#fff] ",
-    textColor: "text-6xl flex w-full text-[#1f1f1f]",
-    textColor2: "text-6xl text-[#7f5af0] flex justify-end",
-    apresentar: "text-3xl text-[#000]",
-    buttonBg: "text-3xl bg-[#7f5af0] py-3 text-[#fff] px-10 rounded-2xl hover:bg-[#a48bee]",
-    githubButton: "text-[#7f5af0] h-15 w-15 hover:text-[#a48bee]",
-    linkedinButton: "text-[#7f5af0] h-15 w-15 hover:text-[#a48bee]",
+    bgColor: "bg-[#fff] transition duration-400 ease-in-out",
+    textColor: "text-6xl flex w-full text-[#1f1f1f] transition duration-400 ease-in-out",
+    textColor2: "text-6xl text-[#7f5af0] flex justify-end transition duration-400 ease-in-out",
+    apresentar: "text-3xl text-[#000] transition duration-400 ease-in-out",
+    buttonBg: "text-3xl bg-[#7f5af0] py-3 text-[#fff] px-10 rounded-2xl hover:bg-[#a48bee] transition duration-400 ease-in-out",
+    githubButton: "text-[#7f5af0] h-15 w-15 hover:text-[#a48bee] transition duration-400 ease-in-out",
+    linkedinButton: "text-[#7f5af0] h-15 w-15 hover:text-[#a48bee] transition duration-400 ease-in-out ",
   };
 
   const escuro: Tema = {
-    bgColor: "bg-[#1f1f1f] ",
-    textColor: "text-6xl text-[#fff] flex w-full",
-    textColor2: "text-6xl text-[#0400ff] flex justify-end",
-    apresentar: "text-3xl text-[#fff]",
-    buttonBg: "text-3xl bg-[#0400ff] hover:bg-[#423eff] py-3 text-[#fff] px-10 rounded-2xl",
-    githubButton: "text-[#0400ff] h-15 w-15 hover:text-[#423eff]",
-    linkedinButton: "text-[#0400ff] h-15 w-15 hover:text-[#423eff]",
+    bgColor: "bg-[#1f1f1f] transition duration-400 ease-in-out",
+    textColor: "text-6xl text-[#fff] flex w-full transition duration-400 ease-in-out",
+    textColor2: "text-6xl text-[#0400ff] flex justify-end transition duration-400 ease-in-out",
+    apresentar: "text-3xl text-[#fff] transition duration-400 ease-in-out",
+    buttonBg: "text-3xl bg-[#0400ff] hover:bg-[#423eff] py-3 text-[#fff] px-10 rounded-2xl transition duration-400 ease-in-out",
+    githubButton: "text-[#0400ff] h-15 w-15 hover:text-[#423eff] transition duration-400 ease-in-out",
+    linkedinButton: "text-[#0400ff] h-15 w-15 hover:text-[#423eff] transition duration-400 ease-in-out",
   };
 
   return (
@@ -82,3 +82,5 @@ export const Aprecentacao: React.FC = () => {
     </main>
   );
 }
+
+export default Aprecentacao

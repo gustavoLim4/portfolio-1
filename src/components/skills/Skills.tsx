@@ -44,7 +44,7 @@ export const Skills: React.FC = () => {
     };
 
     return (
-        <main className={darkMode ? claro.corfund : escuro.corfund}>
+        <main className={darkMode ? claro.corfund : escuro.corfund} id="educacao">
             <h1 className={`${darkMode ? claro.h1Skills : escuro.h1Skills} text-5xl py-5 flex justify-center`}>
                 Skills
             </h1>

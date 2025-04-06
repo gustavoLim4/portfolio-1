@@ -65,14 +65,14 @@ const NavBar: React.FC = () => {
                             <a href="#home" className={`${darkMode ? claro.textColor : escuro.textColor}`}>
                                 Home
                             </a>
-                            <a href="#about" className={`${darkMode ? claro.textColor : escuro.textColor}`}>
-                                About
+                            <a href="#educacao" className={`${darkMode ? claro.textColor : escuro.textColor}`}>
+                                Educação
                             </a>
-                            <a href="#projects" className={`${darkMode ? claro.textColor : escuro.textColor}`}>
-                                Projects
+                            <a href="#projetos" className={`${darkMode ? claro.textColor : escuro.textColor}`}>
+                                Projetos
                             </a>
-                            <a href="#contact" className={`${darkMode ? claro.textColor : escuro.textColor}`}>
-                                Contact
+                            <a href="#contato" className={`${darkMode ? claro.textColor : escuro.textColor}`}>
+                                Contanto 
                             </a>
                         </div>
                         <div>
