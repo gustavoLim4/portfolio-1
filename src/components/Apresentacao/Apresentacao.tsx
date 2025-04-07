@@ -49,12 +49,12 @@ const Aprecentacao: React.FC = () => {
               <h1 className={darkMode ? claro.textColor2 : escuro.textColor2}>
                 <Typewriter
                   words={["Dev front-end"]}
-                  loop={false} // Se quiser que repita, mude para true
+                  loop={false} 
                   cursor
                   cursorStyle="|"
-                  typeSpeed={100} // Velocidade da digitação
-                  deleteSpeed={100} // Velocidade ao apagar (caso precise)
-                  delaySpeed={1000} // Tempo antes de recomeçar (se loop=true)
+                  typeSpeed={100}
+                  deleteSpeed={100}
+                  delaySpeed={1000}
                 />
               </h1>
             </div>
