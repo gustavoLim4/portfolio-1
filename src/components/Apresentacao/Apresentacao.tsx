@@ -37,8 +37,22 @@ const Aprecentacao: React.FC = () => {
     linkedinButton: "text-[#0400ff] h-15 w-15 hover:text-[#423eff] transition duration-400 ease-in-out",
   };
 
+
+
   return (
     <main>
+      <style>
+        {`
+          @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+          }
+
+          .float-animation {
+            animation: float 3s ease-in-out infinite;
+          }
+        `}
+      </style>
       <div className={`${darkMode ? claro.bgColor : escuro.bgColor} flex`}>
         <div className="w-1/2 p-10 flex flex-col gap-8">
           <div className="flex flex-col gap-1">
@@ -49,7 +63,7 @@ const Aprecentacao: React.FC = () => {
               <h1 className={darkMode ? claro.textColor2 : escuro.textColor2}>
                 <Typewriter
                   words={["Dev front-end"]}
-                  loop={false} 
+                  loop={false}
                   cursor
                   cursorStyle="|"
                   typeSpeed={100}
@@ -76,7 +90,7 @@ const Aprecentacao: React.FC = () => {
           </div>
         </div>
         <div className="w-1/2 flex justify-center">
-          <img src={eulogo} alt="eu logo" />
+          <img src={eulogo} alt="eu logo" className="float-animation"/>
         </div>
       </div>
     </main>
