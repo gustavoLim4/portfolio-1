@@ -1,14 +1,15 @@
 
 import Aprecentacao  from './components/Apresentacao/Apresentacao'
 import Estudo from './components/estudos/Estudo'
-import NavBar from './components/NavBar/NavBar'
+import NavBar from './components/Navbar/NavBar'
+
 import { Skills } from './components/skills/Skills'
 
 export const App = () => {
   return (
     <main>
       <section>
-        <NavBar />
+        <NavBar/>
       </section>
       <section>
         <Aprecentacao />
