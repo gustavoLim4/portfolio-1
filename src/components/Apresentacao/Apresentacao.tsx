@@ -45,7 +45,7 @@ const Aprecentacao: React.FC = () => {
         {`
           @keyframes float {
             0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
+            50% { transform: translateY(-15px); } 
           }
 
           .float-animation {
