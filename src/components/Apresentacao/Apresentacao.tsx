@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { RootState } from "../../store/store";
+import { RootState } from "../../store/redux";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import eulogo from "../../img/eu-anime.png";
 import { Typewriter } from "react-simple-typewriter";
@@ -13,8 +13,7 @@ const Aprecentacao: React.FC = () => {
     textColor2: string;
     buttonBg: string;
     apresentar: string;
-    githubButton: string;
-    linkedinButton: string;
+    BotaosLinks: string;
   }
 
   const claro: Tema = {
@@ -23,8 +22,7 @@ const Aprecentacao: React.FC = () => {
     textColor2: "text-6xl text-[#7f5af0] flex justify-end transition duration-400 ease-in-out",
     apresentar: "text-3xl text-[#000] transition duration-400 ease-in-out",
     buttonBg: "text-3xl bg-[#7f5af0] py-3 text-[#fff] px-10 rounded-2xl hover:bg-[#a48bee] transition duration-400 ease-in-out",
-    githubButton: "text-[#7f5af0] h-15 w-15 hover:text-[#a48bee] transition duration-400 ease-in-out",
-    linkedinButton: "text-[#7f5af0] h-15 w-15 hover:text-[#a48bee] transition duration-400 ease-in-out ",
+    BotaosLinks: "text-[#7f5af0] h-15 w-15 hover:text-[#a48bee] transition duration-400 ease-in-out",
   };
 
   const escuro: Tema = {
@@ -33,14 +31,13 @@ const Aprecentacao: React.FC = () => {
     textColor2: "text-6xl text-[#0400ff] flex justify-end transition duration-400 ease-in-out",
     apresentar: "text-3xl text-[#fff] transition duration-400 ease-in-out",
     buttonBg: "text-3xl bg-[#0400ff] hover:bg-[#423eff] py-3 text-[#fff] px-10 rounded-2xl transition duration-400 ease-in-out",
-    githubButton: "text-[#0400ff] h-15 w-15 hover:text-[#423eff] transition duration-400 ease-in-out",
-    linkedinButton: "text-[#0400ff] h-15 w-15 hover:text-[#423eff] transition duration-400 ease-in-out",
+    BotaosLinks: "text-[#0400ff] h-15 w-15 hover:text-[#423eff] transition duration-400 ease-in-out",
   };
 
 
 
   return (
-    <main>
+    <main className="scroll-smooth">
       <style>
         {`
           @keyframes float {
@@ -82,10 +79,10 @@ const Aprecentacao: React.FC = () => {
               Projetos
             </a>
             <a href="https://www.linkedin.com/in/gustavo-dvp/" className="flex items-end">
-              <FaLinkedin className={darkMode ? claro.linkedinButton : escuro.linkedinButton} />
+              <FaLinkedin className={darkMode ? claro.BotaosLinks : escuro.BotaosLinks} />
             </a>
             <a href="https://github.com/gustavoLim4" className="flex items-end">
-              <FaGithub className={darkMode ? claro.githubButton : escuro.githubButton} />
+              <FaGithub className={darkMode ? claro.BotaosLinks : escuro.BotaosLinks} />
             </a>
           </div>
         </div>

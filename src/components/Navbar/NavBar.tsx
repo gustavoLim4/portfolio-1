@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState, AppDispatch } from "../../store/store";
+import { RootState, AppDispatch } from "../../store/redux";
 import { TrocaCor } from "../../store/slices/themeSlice";
 import logoClara from "../../img/loco-claro.png";
 import logoEscura from "../../img/logo-escuro.png";
@@ -48,11 +48,11 @@ const NavBar: React.FC = () => {
     };
 
     return (
-        <nav className={`transition-all duration-400 ease-in-out ${navfixo ? "fixed top-0 w-full z-50 translate-y-0 shadow-lg" :""
+        <nav className={`transition-all duration-400 ease-in-out ${navfixo ? "fixed top-0 w-full z-50 translate-y-0 shadow-lg" : ""
             }`}>
             <div className={`${darkMode ? claro.bgColor : escuro.bgColor} transition duration-400 ease-in-out`}>
                 <div className="flex items-center justify-between py-5 px-10">
-                    <a href="#">
+                    <a href="#home">
                         <img
                             src={darkMode ? logoClara : logoEscura}
                             alt="Logo"
@@ -61,10 +61,13 @@ const NavBar: React.FC = () => {
                     </a>
 
                     <div className="flex items-center gap-10">
-                        <div className="flex gap-15">
+                        <div className="flex gap-13">
                             <a href="#home" className={`${darkMode ? claro.textColor : escuro.textColor}`}>
                                 Home
                             </a>
+                                <a href="#skills" className={`${darkMode ? claro.textColor : escuro.textColor}`}>
+                                    Skills
+                                </a>
                             <a href="#educacao" className={`${darkMode ? claro.textColor : escuro.textColor}`}>
                                 Educação
                             </a>
@@ -72,7 +75,7 @@ const NavBar: React.FC = () => {
                                 Projetos
                             </a>
                             <a href="#contato" className={`${darkMode ? claro.textColor : escuro.textColor}`}>
-                                Contanto 
+                                Contato
                             </a>
                         </div>
                         <div>
