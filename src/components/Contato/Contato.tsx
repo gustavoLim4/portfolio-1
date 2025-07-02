@@ -28,7 +28,7 @@ const Contato: React.FC = () => {
         inputs: " p-2 rounded-md border-0 shadow-[0px_1px_5px_rgba(0,0,0,0.40)] focus:outline-none transition duration-400 ease-in-out",
         textarea: "resize-none p-2 rounded-md border-0 shadow-[0px_1px_5px_rgba(0,0,0,0.40)] focus:outline-none transition duration-400 ease-in-out h-32",
         btnEnv: "bg-[#7f5af0] w-25 text-white focus:outline-none p-2 rounded-md hover:bg-[#6b4fdb] transition duration-400 ease-in-out text-lg ",
-        icons: "text-5xl text-[#7f5af0] transition duration-400 ease-in-out hover:text-[#a48bee]",
+        icons: "text-5xl text-[#7f5af0] transition duration-400 ease-in-out hover:text-[#a48bee] hover:-translate-y-1",
         TituloCont: "text-[#7f5af0] transition duration-400 ease-in-out text-7xl",
         textoTR: "text-[#000] transition duration-400 ease-in-out",
 
@@ -40,7 +40,7 @@ const Contato: React.FC = () => {
         inputs: "p-2 rounded-md border-0  shadow-[0px_1px_25px_rgba(255,255,255,0.10)] transition duration-300 ease-in-out placeholder:text-[#fff]",
         textarea: "resize-none p-2 rounded-md border-0  shadow-[0px_1px_25px_rgba(255,255,255,0.10)] transition duration-400 ease-in-out h-32 placeholder:text-[#fff]",
         btnEnv: "bg-[#0400ff] w-25 text-white focus:outline-none p-2 rounded-md hover:bg-[#0300cc] transition duration-400 ease-in-out text-lg ",
-        icons: "text-5xl text-[#0400ff] hover:text-[#423eff] transition duration-400 ease-in-out",
+        icons: "text-5xl text-[#0400ff] hover:text-[#423eff] transition duration-400 ease-in-out hover:-translate-y-1",
         TituloCont: "text-[#0400ff] transition duration-400 ease-in-out text-7xl",
         textoTR: "text-[#fff] transition duration-400 ease-in-out",
     }

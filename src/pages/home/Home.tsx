@@ -1,14 +1,13 @@
+import Aprecentacao from "../../components/Apresentacao/Apresentacao"
+import Contato from "../../components/Contato/Contato"
+import Estudo from "../../components/estudos/Estudo"
+import Footer from "../../components/Footer/Footer"
+import NavBar from "../../components/Navbar/NavBar"
+import Projetos from "../../components/Projetos/Projetos"
+import { Skills } from "../../components/skills/Skills"
 
-import Aprecentacao from './components/Apresentacao/Apresentacao'
-import Contato from './components/Contato/Contato'
-import Estudo from './components/estudos/Estudo'
-import Footer from './components/Footer/Footer'
-import NavBar from './components/Navbar/NavBar'
-import Projetos from './components/Projetos/Projetos'
 
-import { Skills } from './components/skills/Skills'
-
-export const App = () => {
+export const Home = () => {
   return (
     <main>
       <section>
@@ -18,7 +17,7 @@ export const App = () => {
         <Aprecentacao />
       </section>
       <section id="skills">
-        <Skills />
+        <Skills/>
       </section>
       <section id="educacao">
         <Estudo />
@@ -35,4 +34,3 @@ export const App = () => {
     </main>
   )
 }
-

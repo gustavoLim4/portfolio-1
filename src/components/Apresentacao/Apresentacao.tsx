@@ -21,8 +21,8 @@ const Aprecentacao: React.FC = () => {
     textColor: "text-6xl flex w-full text-[#1f1f1f] transition duration-400 ease-in-out",
     textColor2: "text-6xl text-[#7f5af0] flex justify-end transition duration-400 ease-in-out",
     apresentar: "text-3xl text-[#000] transition duration-400 ease-in-out",
-    buttonBg: "text-3xl bg-[#7f5af0] py-3 text-[#fff] px-10 rounded-2xl hover:bg-[#a48bee] transition duration-400 ease-in-out",
-    BotaosLinks: "text-[#7f5af0] h-15 w-15 hover:text-[#a48bee] transition duration-400 ease-in-out",
+    buttonBg: "text-3xl bg-[#7f5af0] py-3 text-[#fff] px-10 rounded-2xl hover:bg-[#a48bee] transition duration-400 ease-in-out hover:-translate-y-1",
+    BotaosLinks: "text-[#7f5af0] h-15 w-15 hover:text-[#a48bee] transition duration-400 ease-in-out hover:-translate-y-1",
   };
 
   const escuro: Tema = {
@@ -30,8 +30,8 @@ const Aprecentacao: React.FC = () => {
     textColor: "text-6xl text-[#fff] flex w-full transition duration-400 ease-in-out",
     textColor2: "text-6xl text-[#0400ff] flex justify-end transition duration-400 ease-in-out",
     apresentar: "text-3xl text-[#fff] transition duration-400 ease-in-out",
-    buttonBg: "text-3xl bg-[#0400ff] hover:bg-[#423eff] py-3 text-[#fff] px-10 rounded-2xl transition duration-400 ease-in-out",
-    BotaosLinks: "text-[#0400ff] h-15 w-15 hover:text-[#423eff] transition duration-400 ease-in-out",
+    buttonBg: "text-3xl bg-[#0400ff] hover:bg-[#423eff] py-3 text-[#fff] px-10 rounded-2xl transition duration-400 ease-in-out hover:-translate-y-1",
+    BotaosLinks: "text-[#0400ff] h-15 w-15 hover:text-[#423eff] transition duration-400 ease-in-out hover:-translate-y-1",
   };
 
 

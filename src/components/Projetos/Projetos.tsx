@@ -1,11 +1,15 @@
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/redux";
-
+import Cards from "./Cards/Cards";
+import TechStore from "../../img/projeto-TechStore.png";
+import FlashClean from "../../img/projeto-flashclean.png"
+import Athetic from "../../img/projeto-Athetic.png"
+import spotify from "../../img/Spotify.png"
+import RomaCortinas from "../../img/RomaCortinas.png"
 
 const Projetos: React.FC = () => {
 
     const darkMode = useSelector((state: RootState) => state.theme.darkMode);
-
 
     interface Tema {
         bgcolor: string;
@@ -13,11 +17,12 @@ const Projetos: React.FC = () => {
     }
     const claro: Tema = {
         bgcolor: "bg-[#fff] transition duration-400 ease-in-out",
-        h1projetos: "text-5xl py-15 flex justify-center text-[#7f5af0] transition duration-400 ease-in-out"
+        h1projetos: "text-5xl py-10 flex justify-center text-[#7f5af0] transition duration-400 ease-in-out",
     }
     const escuro: Tema = {
         bgcolor: "bg-[#1f1f1f] transition duration-400 ease-in-out",
-        h1projetos: "text-5xl py-15 flex justify-center text-[#0400ff] transition duration-400 ease-in-out"
+        h1projetos: "text-5xl py-10 flex justify-center text-[#0400ff] transition duration-400 ease-in-out",
+       
     }
     return (
         <main>
@@ -25,8 +30,74 @@ const Projetos: React.FC = () => {
                 <h1 className={`${darkMode ? claro.h1projetos : escuro.h1projetos}`}>
                     Projetos
                 </h1>
-                <div>
-                    <div>
+                <div className="mx-20">
+                    <div className="flex gap-5 w-full my-10 justify-center">
+                        <Cards
+                            rota="https://flashclean.com.br"
+                            imagem={FlashClean}
+                            titulo="Flash Clean"
+                            descricao="Loja virtual desenvolvida como freelance, 
+                         focada na venda de produtos de limpeza. Criei o e-commerce
+                         utilizando WordPress e Elementor, com layout moderno, responsivo e 
+                         otimizado para facilitar a navegação e conversão de vendas."
+                            tecnologias={["Wordpress", "Elementor Pro", "WooCommerce", "CSS"]}
+                        />
+
+                        <Cards
+                            rota=""
+                            imagem={TechStore}
+                            titulo="Tech Store"
+                            descricao="Projeto acadêmico de e-commerce criado durante 
+                            a faculdade, com foco na venda de iPhones, notebooks e fones
+                             de ouvido. Desenvolvi todo o front-end com design responsivo e 
+                             navegação intuitiva. O projeto foi avaliado com nota máxima."
+                            tecnologias={["Html", "Scss", "JavaScript", "Figma"]}
+                        />
+                        <Cards
+                            rota=""
+                            imagem={Athetic}
+                            titulo="Athetic Force"
+                            descricao="Sistema de academia criado como projeto prático em grupo 
+                        para aprendizado de novas tecnologias. Desenvolvemos uma plataforma com 
+                        foco em funcionalidades como cadastro de treinos, agenda e acompanhamento 
+                        do desempenho dos alunos."
+                            tecnologias={["React", "TypeScript", "Redux", "graphql", " BootsTrap", "Figma"]}
+                        />
+
+                    </div>
+                    <div className="flex gap-5 w-full justify-center">
+                        <Cards
+                            rota="https://romacortinas.com.br"
+                            imagem={RomaCortinas}
+                            titulo="Roma Cortinas LTDA"
+                            descricao="Projeto de sistema comercial desenvolvido para uma empresa de
+                             cortinas, focado na gestão de pedidos, clientes e produtos. Criei a 
+                             interface do sistema com um design simples, responsivo e otimizado. 
+                             O projeto está em produção e sendo utilizado ativamente."
+                            tecnologias={["Wordpress", "Elementor Pro", "WooCommerce", "CSS", "Figma"]}
+                        />
+                        <Cards
+                            rota="https://www.figma.com/proto/6Y35Xplv0HfYKHeElJB11o/Spotify-Aula?node-id=2-4&p=f&t=kKqJIJzgsEeHWcXF-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2"
+                            imagem={spotify}
+                            titulo="Spotify"
+                            descricao="Loja virtual desenvolvida como freelance, 
+                         focada na venda de produtos de limpeza. Criei o e-commerce
+                         utilizando WordPress e Elementor, com layout moderno, responsivo e 
+                         otimizado para facilitar a navegação e conversão de vendas."
+                            tecnologias={["Wordpress", "Elementor Pro", "WooCommerce", "CSS"]}
+                        />
+
+
+                        <Cards
+                            rota=""
+                            imagem={Athetic}
+                            titulo="Athetic Force"
+                            descricao="Sistema de academia criado como projeto prático em grupo 
+                        para aprendizado de novas tecnologias. Desenvolvemos uma plataforma com 
+                        foco em funcionalidades como cadastro de treinos, agenda e acompanhamento 
+                        do desempenho dos alunos."
+                            tecnologias={["React", "TypeScript", "Redux", "graphql", " BootsTrap", "Figma"]}
+                        />
 
                     </div>
                 </div>
