@@ -114,6 +114,7 @@ const Projetos: React.FC = () => {
                              e organização visual. Esse projeto foi feito de forma independente por gosto pessoal."
                             tecnologias={["Html", "Css"]}
                         />
+
                         
                         <Cards
                             rota="https://gustavolim4.github.io/cafeteria/"
