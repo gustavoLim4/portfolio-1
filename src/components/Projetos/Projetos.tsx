@@ -35,7 +35,7 @@ const Projetos: React.FC = () => {
                     Projetos
                 </h1>
                 <div className="mx-20">
-                    <div className="flex gap-5 w-full my-10 justify-center">
+                    <div className="flex gap-5 w-full mb-10 justify-center">
                         <Cards
                             rota="https://flashclean.com.br"
                             imagem={FlashClean}
@@ -69,7 +69,7 @@ const Projetos: React.FC = () => {
                         />
 
                     </div>
-                    <div className="flex gap-5 w-full justify-center">
+                    <div className="flex gap-5 w-full mb-10 justify-center">
                         <Cards
                             rota="https://romacortinas.com.br"
                             imagem={RomaCortinas}
@@ -104,7 +104,7 @@ const Projetos: React.FC = () => {
                         />
 
                     </div>
-                    <div className="flex gap-5 w-full justify-center">
+                    <div className="flex gap-5 w-full mb-10 justify-center">
                         <Cards
                             rota="https://gustavolim4.github.io/Valorante/"
                             imagem={Vava}
