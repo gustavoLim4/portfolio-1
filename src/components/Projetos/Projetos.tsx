@@ -104,7 +104,7 @@ const Projetos: React.FC = () => {
                         />
 
                     </div>
-                    <div className="flex gap-5 w-full mb-10 justify-center">
+                    <div className="flex gap-5 w-full justify-center">
                         <Cards
                             rota="https://gustavolim4.github.io/Valorante/"
                             imagem={Vava}
