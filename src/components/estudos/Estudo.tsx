@@ -97,6 +97,24 @@ const Estudo: React.FC = () => {
                     </div>
                 </div>
                 <div className="flex mx-15">
+                    <div className="flex h-65">
+                        <i className={darkMode ? claro.iconbooks : escuro.iconbooks}>📚</i>
+                        <div className={darkMode ? claro.linha : escuro.linha}>
+                            <span className={darkMode ? claro.spantext : escuro.spantext}>2025 - Cursando </span>
+                            <h3 className={darkMode ? claro.cursoTxt : escuro.cursoTxt}>
+                                Curso de Designer UI/UX (Figma)
+                            </h3>
+                            <p className={darkMode ? claro.texto : escuro.texto}> Curso focado na criação de interfaces intuitivas 
+                            e experiências de usuário eficazes. Aprendi a usar o Figma para desenvolver layouts, 
+                            protótipos e sistemas de design, aplicando princípios de usabilidade e design responsivo.</p>
+                        </div>
+                        <IoIosAdd
+                            className={darkMode ? claro.xizinho : escuro.xizinho}
+                            style={spinStyle}
+                        />
+                    </div>
+                </div>
+                <div className="flex mx-15">
                     <div className="flex h-60">
                         <i className={darkMode ? claro.iconbooks : escuro.iconbooks}>📚</i>
                         <div className={darkMode ? claro.linha : escuro.linha}>
@@ -116,7 +134,7 @@ const Estudo: React.FC = () => {
                             <span className={darkMode ? claro.spantext : escuro.spantext}>2024 - 2024</span>
                             <h3 className={darkMode ? claro.cursoTxt : escuro.cursoTxt}>Desenvolvimento front-end em JS.</h3>
                             <p className={darkMode ? claro.texto : escuro.texto}>
-                                Curso complementar de JavaScript para front-end na instituição do Senac.
+                                Curso complemento de JavaScript para front-end na instituição do Senac.
                             </p>
                         </div>
                     </div>
