@@ -21,11 +21,11 @@ const Projetos: React.FC = () => {
     }
     const claro: Tema = {
         bgcolor: "bg-[#fff] transition duration-400 ease-in-out",
-        h1projetos: "text-5xl py-10 flex justify-center text-[#7f5af0] transition duration-400 ease-in-out",
+        h1projetos: "text-5xl py-30 flex justify-center text-[#7f5af0] transition duration-400 ease-in-out",
     }
     const escuro: Tema = {
         bgcolor: "bg-[#1f1f1f] transition duration-400 ease-in-out",
-        h1projetos: "text-5xl py-10 flex justify-center text-[#0400ff] transition duration-400 ease-in-out",
+        h1projetos: "text-5xl py-30 flex justify-center text-[#0400ff] transition duration-400 ease-in-out",
 
     }
     return (
@@ -35,7 +35,7 @@ const Projetos: React.FC = () => {
                     Projetos
                 </h1>
                 <div className="mx-20">
-                    <div className="flex gap-5 w-full mb-10 justify-center">
+                    <div className="flex gap-5 w-full mb-5 justify-center">
                         <Cards
                             rota="https://flashclean.com.br"
                             imagem={FlashClean}
@@ -69,7 +69,7 @@ const Projetos: React.FC = () => {
                         />
 
                     </div>
-                    <div className="flex gap-5 w-full mb-10 justify-center">
+                    <div className="flex gap-5 w-full mb-5 justify-center">
                         <Cards
                             rota="https://romacortinas.com.br"
                             imagem={RomaCortinas}
