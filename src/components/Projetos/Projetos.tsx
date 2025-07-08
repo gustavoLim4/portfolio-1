@@ -21,11 +21,11 @@ const Projetos: React.FC = () => {
     }
     const claro: Tema = {
         bgcolor: "bg-[#fff] transition duration-400 ease-in-out",
-        h1projetos: "text-5xl py-30 flex justify-center text-[#7f5af0] transition duration-400 ease-in-out",
+        h1projetos: "text-5xl py-20 flex justify-center text-[#7f5af0] transition duration-400 ease-in-out",
     }
     const escuro: Tema = {
         bgcolor: "bg-[#1f1f1f] transition duration-400 ease-in-out",
-        h1projetos: "text-5xl py-30 flex justify-center text-[#0400ff] transition duration-400 ease-in-out",
+        h1projetos: "text-5xl py-20 flex justify-center text-[#0400ff] transition duration-400 ease-in-out",
 
     }
     return (
