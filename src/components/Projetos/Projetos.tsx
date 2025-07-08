@@ -6,6 +6,10 @@ import FlashClean from "../../img/projeto-flashclean.png"
 import Athetic from "../../img/projeto-Athetic.png"
 import spotify from "../../img/Spotify.png"
 import RomaCortinas from "../../img/RomaCortinas.png"
+import ListaTarefas from "../../img/Lista-Tarefas.png"
+import CalculoIMC from "../../img/Calculo-IMC.png"
+import Vava from "../../img/Vava.png"
+import CafeDeOuro from "../../img/CafeDeOuro.png"
 
 const Projetos: React.FC = () => {
 
@@ -22,7 +26,7 @@ const Projetos: React.FC = () => {
     const escuro: Tema = {
         bgcolor: "bg-[#1f1f1f] transition duration-400 ease-in-out",
         h1projetos: "text-5xl py-10 flex justify-center text-[#0400ff] transition duration-400 ease-in-out",
-       
+
     }
     return (
         <main>
@@ -40,7 +44,7 @@ const Projetos: React.FC = () => {
                          focada na venda de produtos de limpeza. Criei o e-commerce
                          utilizando WordPress e Elementor, com layout moderno, responsivo e 
                          otimizado para facilitar a navegação e conversão de vendas."
-                            tecnologias={["Wordpress", "Elementor Pro", "WooCommerce", "CSS"]}
+                        tecnologias={["Wordpress", "Elementor Pro", "WooCommerce", "CSS",]}
                         />
 
                         <Cards
@@ -51,7 +55,7 @@ const Projetos: React.FC = () => {
                             a faculdade, com foco na venda de iPhones, notebooks e fones
                              de ouvido. Desenvolvi todo o front-end com design responsivo e 
                              navegação intuitiva. O projeto foi avaliado com nota máxima."
-                            tecnologias={["Html", "Scss", "JavaScript", "Figma"]}
+                            tecnologias={["Html", "Css", "Scss", "JavaScript", "Figma", "Designer UI/UX"]}
                         />
                         <Cards
                             rota=""
@@ -74,7 +78,7 @@ const Projetos: React.FC = () => {
                              cortinas, focado na gestão de pedidos, clientes e produtos. Criei a 
                              interface do sistema com um design simples, responsivo e otimizado. 
                              O projeto está em produção e sendo utilizado ativamente."
-                            tecnologias={["Wordpress", "Elementor Pro", "WooCommerce", "CSS", "Figma"]}
+                            tecnologias={["Wordpress", "Elementor Pro", "Responsivo", "CSS", "Figma"]}
                         />
                         <Cards
                             rota="https://www.figma.com/proto/6Y35Xplv0HfYKHeElJB11o/Spotify-Aula?node-id=2-4&p=f&t=kKqJIJzgsEeHWcXF-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2"
@@ -84,21 +88,52 @@ const Projetos: React.FC = () => {
                          focada na venda de produtos de limpeza. Criei o e-commerce
                          utilizando WordPress e Elementor, com layout moderno, responsivo e 
                          otimizado para facilitar a navegação e conversão de vendas."
-                            tecnologias={["Wordpress", "Elementor Pro", "WooCommerce", "CSS"]}
+                            tecnologias={["Figma", "Designer UI/UX", "Prototype"]}
                         />
 
 
                         <Cards
-                            rota=""
-                            imagem={Athetic}
-                            titulo="Athetic Force"
-                            descricao="Sistema de academia criado como projeto prático em grupo 
-                        para aprendizado de novas tecnologias. Desenvolvemos uma plataforma com 
-                        foco em funcionalidades como cadastro de treinos, agenda e acompanhamento 
-                        do desempenho dos alunos."
-                            tecnologias={["React", "TypeScript", "Redux", "graphql", " BootsTrap", "Figma"]}
+                            rota="https://gustavolim4.github.io/lista-tarefeas/"
+                            imagem={ListaTarefas}
+                            titulo="Lista de Tarefas"
+                            descricao="Projeto de lista de tarefas feito com HTML, CSS e JavaScript puro.
+                             Armazena dados no navegador com localStorage, sem uso de banco de dados externo.
+                              A interface é simples, responsiva e focada na prática de conceitos fundamentais 
+                              do front-end."
+                            tecnologias={["Html", "Css", "JavaScript", "Responsivo"]}
                         />
 
+                    </div>
+                    <div className="flex gap-5 w-full my-10 justify-center">
+                        <Cards
+                            rota="https://gustavolim4.github.io/Valorante/"
+                            imagem={Vava}
+                            titulo="Login do Valorante"
+                            descricao="Projeto inspirado no jogo Valorant, criado para praticar HTML e CSS.
+                             Desenvolvi a tela de login com foco em aprimorar estruturação de layout, estilização 
+                             e organização visual. Esse projeto foi feito de forma independente por gosto pessoal."
+                            tecnologias={["Html", "Css"]}
+                        />
+                        <Cards
+                            rota="https://gustavolim4.github.io/cafeteria/"
+                            imagem={CafeDeOuro}
+                            titulo="Café do Ouro"
+                            descricao="Landing page criada em uma noite para testar componentes da biblioteca 
+                            Uiverse.io. O projeto simula uma cafeteria fictícia, com foco em estilo visual, 
+                            menus e animações. Foi uma ótima oportunidade para experimentar recursos prontos 
+                            em HTML e CSS."
+                            tecnologias={["Html", "Css", "UIverse.io"]}
+                        />
+                        <Cards
+                            rota="https://gustavolim4.github.io/Calculo-imc/"
+                            imagem={CalculoIMC}
+                            titulo="Calculo de IMC"
+                            descricao="Projeto desenvolvido para praticar estruturas condicionais 
+                            com if e else em JavaScript. Calcula o IMC com base nos dados inseridos
+                             e exibe a classificação. Foi criado durante a faculdade como parte dos 
+                             exercícios de lógica de programação."
+                            tecnologias={["Html", "Css", "JavaScript",]}
+                        />
                     </div>
                 </div>
             </div>
