@@ -11,6 +11,8 @@ import CalculoIMC from "../../img/Calculo-IMC.png"
 import Vava from "../../img/Vava.png"
 import CafeDeOuro from "../../img/CafeDeOuro.png"
 
+
+
 const Projetos: React.FC = () => {
 
     const darkMode = useSelector((state: RootState) => state.theme.darkMode);
@@ -28,13 +30,15 @@ const Projetos: React.FC = () => {
         h1projetos: "text-5xl py-20 flex justify-center text-[#0400ff] transition duration-400 ease-in-out",
 
     }
+  
+
     return (
         <main>
             <div className={`${darkMode ? claro.bgcolor : escuro.bgcolor}`}>
                 <h1 className={`${darkMode ? claro.h1projetos : escuro.h1projetos}`}>
                     Projetos
                 </h1>
-                <div className="mx-20">
+                <div className="mx-100">
                     <div className="flex gap-5 w-full mb-5 justify-center">
                         <Cards
                             rota="https://flashclean.com.br"
@@ -44,7 +48,7 @@ const Projetos: React.FC = () => {
                          focada na venda de produtos de limpeza. Criei o e-commerce
                          utilizando WordPress e Elementor, com layout moderno, responsivo e 
                          otimizado para facilitar a navegação e conversão de vendas."
-                        tecnologias={["Wordpress", "Elementor Pro", "WooCommerce", "CSS",]}
+                            tecnologias={["Wordpress", "Elementor Pro", "WooCommerce", "CSS",]}
                         />
 
                         <Cards
@@ -115,7 +119,7 @@ const Projetos: React.FC = () => {
                             tecnologias={["Html", "Css"]}
                         />
 
-                        
+
                         <Cards
                             rota="https://gustavolim4.github.io/cafeteria/"
                             imagem={CafeDeOuro}

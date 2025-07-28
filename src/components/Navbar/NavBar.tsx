@@ -5,86 +5,122 @@ import { TrocaCor } from "../../store/slices/themeSlice";
 import logoClara from "../../img/loco-claro.png";
 import logoEscura from "../../img/logo-escuro.png";
 import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
+import { IoMenu, IoClose } from "react-icons/io5";
 
 const NavBar: React.FC = () => {
     const dispatch = useDispatch<AppDispatch>();
     const darkMode = useSelector((state: RootState) => state.theme.darkMode);
-    const [navfixo, setNavFixo] = useState(false);
+    const [navFixo, setNavFixo] = useState(false);
+    const [menuAberto, setMenuAberto] = useState(false);
 
     useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 20) {
-                setNavFixo(true);
-            } else {
-                setNavFixo(false);
-            }
-        };
-
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
+        const scroll = () => setNavFixo(window.scrollY > 20);
+        window.addEventListener("scroll", scroll);
+        return () => window.removeEventListener("scroll", scroll);
     }, []);
 
-    interface Tema {
-        bgColor: string;
-        textColor: string;
-        buttonBg: string;
-    }
+    const tema = darkMode
+        ? {
+              logo: logoClara,
+              bg: "bg-white shadow-md",
+              text: "text-[#7f5af0] hover:text-[#a48bee]",
+              border: "after:bg-[#a48bee]",
+              button: "text-[#1f1f1f]",
+              menuBg: "bg-white",
+          }
+        : {
+              logo: logoEscura,
+              bg: "bg-[#1f1f1f] shadow-md",
+              text: "text-[#0400ff] hover:text-[#423eff]",
+              border: "after:bg-[#423eff]",
+              button: "text-white",
+              menuBg: "bg-[#1f1f1f]",
+          };
 
-    const claro: Tema = {
-        bgColor: "bg-[#fff] shadow-[0px_5px_15px_rgba(1,0,0,0.1)] transition duration-400 ease-in-out",
-        textColor: `text-[#7f5af0] text-xl hover:text-[#a48bee] 
-        relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 
-        after:h-[2px] after:bg-[#a48bee] after:transition-all after:duration-300 hover:after:w-full`,
+    const handleLinkClick = () => setMenuAberto(false);
 
-        buttonBg: "w-10 h-10 text-[#1f1f1f]  p-1 rounded-full transition duration-400 ease-in-out hover:scale-110"
-    };
-
-    const escuro: Tema = {
-        bgColor: "bg-[#1f1f1f] shadow-[0px_5px_15px_rgba(255,255,255,0.1)] transition duration-400 ease-in-out",
-        textColor: `text-[#0400ff] text-xl hover:text-[#423eff] 
-        relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 
-        after:h-[2px] after:bg-[#423eff] after:transition-all after:duration-300 hover:after:w-full`,
-        buttonBg: "w-10 h-10 text-[#fff] p-1 rounded-full hover:scale-125 transition duration-400 ease-in-out hover:scale-110"
-    };
+    const navLinks = [
+        { href: "#home", label: "Home" },
+        { href: "#skills", label: "Skills" },
+        { href: "#educacao", label: "Educação" },
+        { href: "#projetos", label: "Projetos" },
+        { href: "#contato", label: "Contato" },
+    ];
 
     return (
-        <nav className={`transition-all duration-400 ease-in-out ${navfixo ? "fixed top-0 w-full z-50 translate-y-0 shadow-lg" : ""
-            }`}>
-            <div className={`${darkMode ? claro.bgColor : escuro.bgColor} transition duration-400 ease-in-out`}>
-                <div className="flex items-center justify-between py-5 px-10">
-                    <a href="#home">
-                        <img
-                            src={darkMode ? logoClara : logoEscura}
-                            alt="Logo"
-                            className="w-50 transition duration-400 ease-in-out"
-                        />
+        <nav className={`transition-all duration-300 ease-in-out ${navFixo ? "fixed top-0 w-full z-50" : ""}`}>
+            <div className={`${tema.bg} transition duration-300`}>
+                <div className="flex justify-between items-center px-5 md:px-10 py-5">
+                    <a href="#home" onClick={handleLinkClick}>
+                        <img src={tema.logo} alt="Logo" className="w-40 md:w-48" />
                     </a>
 
-                    <div className="flex items-center gap-10">
-                        <div className="flex gap-13">
-                            <a href="#home" className={`${darkMode ? claro.textColor : escuro.textColor}`}>
-                                Home
+                    {/* Menu mobile */}
+                    <div className="lg:hidden">
+                        <button
+                            className={`text-3xl ${tema.button}`}
+                            onClick={() => setMenuAberto(!menuAberto)}
+                        >
+                            {menuAberto ? <IoClose /> : <IoMenu />}
+                        </button>
+                    </div>
+
+                    {/* Menu desktop */}
+                    <div className="hidden lg:flex gap-10 items-center">
+                        {navLinks.map((link) => (
+                            <a
+                                key={link.href}
+                                href={link.href}
+                                className={`text-xl relative group ${tema.text}`}
+                            >
+                                <span className={`after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] group-hover:after:w-full after:transition-all ${tema.border}`}>
+                                    {link.label}
+                                </span>
                             </a>
-                                <a href="#skills" className={`${darkMode ? claro.textColor : escuro.textColor}`}>
-                                    Skills
-                                </a>
-                            <a href="#educacao" className={`${darkMode ? claro.textColor : escuro.textColor}`}>
-                                Educação
-                            </a>
-                            <a href="#projetos" className={`${darkMode ? claro.textColor : escuro.textColor}`}>
-                                Projetos
-                            </a>
-                            <a href="#contato" className={`${darkMode ? claro.textColor : escuro.textColor}`}>
-                                Contato
-                            </a>
-                        </div>
-                        <div>
-                            <button onClick={() => dispatch(TrocaCor())}>
-                                {darkMode ? <MdOutlineLightMode className={claro.buttonBg} /> : <MdOutlineDarkMode className={escuro.buttonBg} />}
-                            </button>
-                        </div>
+                        ))}
+                        <button onClick={() => dispatch(TrocaCor())}>
+                            {darkMode ? (
+                                <MdOutlineLightMode className="w-10 h-10 p-2 rounded-full hover:scale-110 transition" />
+                            ) : (
+                                <MdOutlineDarkMode className="w-10 h-10 p-2 rounded-full hover:scale-110 transition" />
+                            )}
+                        </button>
                     </div>
                 </div>
+
+                {/* Menu mobile aberto */}
+                {menuAberto && (
+                    <>
+                        <div
+                            className={`lg:hidden fixed top-0 right-0 h-full w-64 z-50 p-8 shadow-lg flex flex-col items-center gap-6 transition-transform duration-300 ${tema.menuBg}`}
+                        >
+                            <div className="mt-20 flex flex-col items-center gap-6">
+                                {navLinks.map((link) => (
+                                    <a
+                                        key={link.href}
+                                        href={link.href}
+                                        onClick={handleLinkClick}
+                                        className={`text-xl ${tema.text}`}
+                                    >
+                                        {link.label}
+                                    </a>
+                                ))}
+                                <button onClick={() => { dispatch(TrocaCor()); handleLinkClick(); }}>
+                                    {darkMode ? (
+                                        <MdOutlineLightMode className="w-10 h-10 p-2 rounded-full hover:scale-110 transition" />
+                                    ) : (
+                                        <MdOutlineDarkMode className="w-10 h-10 p-2 rounded-full hover:scale-110 transition" />
+                                    )}
+                                </button>
+                            </div>
+                        </div>
+                        {/* Overlay */}
+                        <div
+                            className="fixed inset-0 bg-black opacity-50 z-40"
+                            onClick={() => setMenuAberto(false)}
+                        />
+                    </>
+                )}
             </div>
         </nav>
     );

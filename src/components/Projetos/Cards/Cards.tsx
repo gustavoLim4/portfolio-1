@@ -43,7 +43,7 @@ const Cards: React.FC<CardsProps> = ({ titulo, descricao, imagem, tecnologias, r
                 <img src={imagem} alt={titulo} className="rounded-md w-full h-50" />
                 <div className="p-3 flex flex-col justify-between">
                     <h1 className={`text-xl font-bold mb-1 ${tituloCor}`}>{titulo}</h1>
-                    <p className="text-justify text-sm mb-3 w-90">{descricao}</p>
+                    <p className="text-justify text-sm mb-3 w-93 h-25">{descricao}</p>
 
                     {/* Tecnologias */}
                     <div className="flex flex-wrap gap-1 mb-1">
