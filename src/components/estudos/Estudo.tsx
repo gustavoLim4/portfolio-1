@@ -19,15 +19,15 @@ const Estudo: React.FC = () => {
     }
 
     const claro: Tema = {
-        h1educacao: "text-5xl py-7 flex justify-center text-[#7f5af0] transition duration-400 ease-in-out",
+        h1educacao: "text-3xl md:text-5xl py-10 flex justify-center text-[#7f5af0] transition duration-400 ease-in-out",
         bgColor: "bg-[#fff] transition duration-400 ease-in-out",
         iconbooks: `bg-[#7f5af0] py-1 pr-2 rounded-full relative left-7.5 text-4xl h-14 icons-timeline transition 
         duration-400 hover:shadow-[0px_1px_15px_#7f5af0] hover:bg-[#fff] transition duration-400 ease-in-out `,
         linha: "border-l-[4px] border-l-[#7f5af0] px-10 py-1 gap-4 flex flex-col transition duration-400 ease-in-out",
         spantext: `p-3 rounded-3xl shadow-[0px_1px_20px_rgba(0,0,0,0.20)] hover:shadow-[0px_1px_15px_#7f5af0]
         text-[#000] w-40 text-center transition duration-400 ease-in-out font-bold`,
-        cursoTxt: "text-3xl text-[#000] transition duration-400 ease-in-out font-bold ",
-        texto: "text-[#000] text-justify w-180 text-lg transition duration-400 ease-in-out",
+        cursoTxt: "text-2xl md:text-3xl text-[#000] transition duration-400 ease-in-out font-bold ",
+        texto: "text-[#000] text-justify text-lg transition duration-400 ease-in-out md:w-180",
         xizinho: "text-7xl text-[#7f5af0] transition duration-400 ease-in-out"
     }
     const escuro: Tema = {
@@ -59,8 +59,8 @@ const Estudo: React.FC = () => {
             </style>
             <div className={darkMode ? claro.bgColor : escuro.bgColor}>
                 <h1 className={darkMode ? claro.h1educacao : escuro.h1educacao}>Educação</h1>
-                <div className="flex mx-15">
-                    <div className="flex h-65">
+                <div className="flex md:mx-15">
+                    <div className="flex md:h-66">
                         <i className={darkMode ? claro.iconbooks : escuro.iconbooks}>📚</i>
                         <div className={darkMode ? claro.linha : escuro.linha}>
                             <span className={darkMode ? claro.spantext : escuro.spantext}>2025 - Cursando </span>
@@ -76,8 +76,8 @@ const Estudo: React.FC = () => {
                         />
                     </div>
                 </div>
-                <div className="flex mx-15">
-                    <div className="flex h-65">
+                <div className="flex md:mx-15">
+                    <div className="flex md:h-66">
                         <i className={darkMode ? claro.iconbooks : escuro.iconbooks}>📚</i>
                         <div className={darkMode ? claro.linha : escuro.linha}>
                             <span className={darkMode ? claro.spantext : escuro.spantext}>2025 - Cursando </span>
@@ -96,8 +96,8 @@ const Estudo: React.FC = () => {
                         />
                     </div>
                 </div>
-                <div className="flex mx-15">
-                    <div className="flex h-65">
+                <div className="flex md:mx-15">
+                    <div className="flex md:h-66">
                         <i className={darkMode ? claro.iconbooks : escuro.iconbooks}>📚</i>
                         <div className={darkMode ? claro.linha : escuro.linha}>
                             <span className={darkMode ? claro.spantext : escuro.spantext}>2025 - Cursando </span>
@@ -114,8 +114,8 @@ const Estudo: React.FC = () => {
                         />
                     </div>
                 </div>
-                <div className="flex mx-15">
-                    <div className="flex h-60">
+                <div className="flex md:mx-15">
+                    <div className="flex md:h-66">
                         <i className={darkMode ? claro.iconbooks : escuro.iconbooks}>📚</i>
                         <div className={darkMode ? claro.linha : escuro.linha}>
                             <span className={darkMode ? claro.spantext : escuro.spantext}>2022 - 2024</span>
@@ -127,8 +127,8 @@ const Estudo: React.FC = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex mx-15">
-                    <div className="flex h-50">
+                <div className="flex md:mx-15">
+                    <div className="flex md:h-52">
                         <i className={darkMode ? claro.iconbooks : escuro.iconbooks}>📚</i>
                         <div className={darkMode ? claro.linha : escuro.linha}>
                             <span className={darkMode ? claro.spantext : escuro.spantext}>2024 - 2024</span>
@@ -139,8 +139,8 @@ const Estudo: React.FC = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex mx-15">
-                    <div className="flex h-50">
+                <div className="flex md:mx-15">
+                    <div className="flex md:h-52">
                         <i className={darkMode ? claro.iconbooks : escuro.iconbooks}>📚</i>
                         <div className={darkMode ? claro.linha : escuro.linha}>
                             <span className={darkMode ? claro.spantext : escuro.spantext}>2024 - 2024</span>
@@ -151,7 +151,7 @@ const Estudo: React.FC = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex mx-15">
+                <div className="flex md:mx-15">
                     <div className="flex ">
                         <i className={darkMode ? claro.iconbooks : escuro.iconbooks}>📚</i>
                     </div>

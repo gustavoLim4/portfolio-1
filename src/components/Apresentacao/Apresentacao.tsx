@@ -18,23 +18,21 @@ const Aprecentacao: React.FC = () => {
 
   const claro: Tema = {
     bgColor: "bg-[#fff] transition duration-400 ease-in-out",
-    textColor: "text-6xl flex w-full text-[#1f1f1f] transition duration-400 ease-in-out",
-    textColor2: "text-6xl text-[#7f5af0] flex justify-end transition duration-400 ease-in-out",
-    apresentar: "text-3xl text-[#000] transition duration-400 ease-in-out",
-    buttonBg: "text-3xl bg-[#7f5af0] py-3 text-[#fff] px-10 rounded-2xl hover:bg-[#a48bee] transition duration-400 ease-in-out hover:-translate-y-1",
-    BotaosLinks: "text-[#7f5af0] h-15 w-15 hover:text-[#a48bee] transition duration-400 ease-in-out hover:-translate-y-1",
+    textColor: "w-full text-[#1f1f1f] transition duration-400 ease-in-out text-4xl md:text-6xl",
+    textColor2: "text-[#7f5af0] flex justify-end transition duration-400 ease-in-out text-4xl md:text-6xl",
+    apresentar: " text-[#000] transition duration-400 ease-in-out md:text-3xl",
+    buttonBg: "text-3xl bg-[#7f5af0] text-[#fff]  rounded-2xl hover:bg-[#a48bee] transition duration-400 ease-in-out hover:-translate-y-1 px-8 py-2 md:px-10 py-3",
+    BotaosLinks: "text-[#7f5af0] hover:text-[#a48bee] transition duration-400 ease-in-out hover:-translate-y-1 h-15 w-15",
   };
 
   const escuro: Tema = {
     bgColor: "bg-[#1f1f1f] transition duration-400 ease-in-out",
-    textColor: "text-6xl text-[#fff] flex w-full transition duration-400 ease-in-out",
-    textColor2: "text-6xl text-[#0400ff] flex justify-end transition duration-400 ease-in-out",
-    apresentar: "text-3xl text-[#fff] transition duration-400 ease-in-out",
+    textColor: "text-[#fff] flex w-full transition duration-400 ease-in-out text-4xl md:text-6xl",
+    textColor2: "text-[#0400ff] flex justify-end transition duration-400 ease-in-out text-4xl md:text-6xl",
+    apresentar: "md:text-3xl text-[#fff] transition duration-400 ease-in-out",
     buttonBg: "text-3xl bg-[#0400ff] hover:bg-[#423eff] py-3 text-[#fff] px-10 rounded-2xl transition duration-400 ease-in-out hover:-translate-y-1",
-    BotaosLinks: "text-[#0400ff] h-15 w-15 hover:text-[#423eff] transition duration-400 ease-in-out hover:-translate-y-1",
+    BotaosLinks: "text-[#0400ff] h-15 w-15 mb:h-15 w-15 hover:text-[#423eff] transition duration-400 ease-in-out hover:-translate-y-1",
   };
-
-
 
   return (
     <main className="scroll-smooth">
@@ -50,14 +48,17 @@ const Aprecentacao: React.FC = () => {
           }
         `}
       </style>
-      <div className={`${darkMode ? claro.bgColor : escuro.bgColor} flex`}>
-        <div className="w-1/2 p-10 flex flex-col gap-8">
+      <div className={`${darkMode ? claro.bgColor : escuro.bgColor} flex flex-col md:flex-row`}>
+        <div className="w-full md:w-1/2 p-10 flex flex-col gap-4 md:gap-8">
           <div className="flex flex-col gap-1">
             <div>
-              <h1 className={darkMode ? claro.textColor : escuro.textColor}>Gustavo Lima</h1>
+              <h1 className={`${darkMode ? claro.textColor : escuro.textColor} `}>
+                Gustavo Lima
+              </h1>
             </div>
             <div>
-              <h1 className={darkMode ? claro.textColor2 : escuro.textColor2}>
+              {/* Mesma coisa para o segundo título */}
+              <h1 className={`${darkMode ? claro.textColor2 : escuro.textColor2} `}>
                 <Typewriter
                   words={["Dev front-end"]}
                   loop={false}
@@ -71,10 +72,11 @@ const Aprecentacao: React.FC = () => {
             </div>
           </div>
 
-          <h3 className={darkMode ? claro.apresentar : escuro.apresentar}>
+          <h3 className={`${darkMode ? claro.apresentar : escuro.apresentar}`}>
             Olá! Bem-vindo ao meu portfólio. Sinta-se à vontade para explorar!
           </h3>
-          <div className="gap-5 flex">
+
+          <div className="flex gap-2 md:gap-5">
             <a href="projects" className={darkMode ? claro.buttonBg : escuro.buttonBg}>
               Projetos
             </a>
@@ -86,12 +88,18 @@ const Aprecentacao: React.FC = () => {
             </a>
           </div>
         </div>
-        <div className="w-1/2 flex justify-center">
-          <img src={eulogo} alt="eu logo" className="float-animation"/>
+
+        <div className="w-full md:w-1/2 flex justify-center mt-6 md:mt-0">
+          {/* imagem menor no mobile com max-w-[200px], maior no desktop com max-w-full */}
+          <img
+            src={eulogo}
+            alt="eu logo"
+            className="float-animation max-w-[200px] md:max-w-full h-auto"
+          />
         </div>
       </div>
     </main>
   );
-}
+};
 
-export default Aprecentacao
+export default Aprecentacao;

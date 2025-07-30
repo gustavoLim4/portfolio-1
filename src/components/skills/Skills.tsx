@@ -44,7 +44,7 @@ export const Skills: React.FC = () => {
   return (
     <main>
       <div className={darkMode ? claro.corfund : escuro.corfund}>
-        <h1 className={`${darkMode ? claro.h1Skills : escuro.h1Skills} text-3xl sm:text-4xl md:text-5xl py-5 flex justify-center`}>
+        <h1 className={`${darkMode ? claro.h1Skills : escuro.h1Skills} text-3xl sm:text-4xl md:text-5xl py-10 flex justify-center`}>
           Skills
         </h1>
         <Marquee speed={165} pauseOnHover={true}>
