@@ -29,7 +29,7 @@ const Contato: React.FC = () => {
         textarea: "w-full resize-none p-2 rounded-md border-0 shadow-[0px_1px_5px_rgba(0,0,0,0.40)] focus:outline-none transition duration-400 ease-in-out h-32",
         btnEnv: "bg-[#7f5af0] w-25 text-white focus:outline-none p-2 rounded-md hover:bg-[#6b4fdb] transition duration-400 ease-in-out text-lg ",
         icons: "text-5xl text-[#7f5af0] transition duration-400 ease-in-out hover:text-[#a48bee] hover:-translate-y-1",
-        TituloCont: "text-[#7f5af0] transition duration-400 ease-in-out text-7xl",
+        TituloCont: "text-[#7f5af0] transition duration-400 ease-in-out text-5xl md:text-7xl",
         textoTR: "text-[#000] transition duration-400 ease-in-out",
 
     }

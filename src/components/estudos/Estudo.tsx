@@ -21,9 +21,9 @@ const Estudo: React.FC = () => {
     const claro: Tema = {
         h1educacao: "text-3xl md:text-5xl py-10 flex justify-center text-[#7f5af0] transition duration-400 ease-in-out",
         bgColor: "bg-[#fff] transition duration-400 ease-in-out",
-        iconbooks: `bg-[#7f5af0] py-1 pr-2 rounded-full relative left-7.5 text-4xl h-14 icons-timeline transition 
-        duration-400 hover:shadow-[0px_1px_15px_#7f5af0] hover:bg-[#fff] transition duration-400 ease-in-out `,
-        linha: "border-l-[4px] border-l-[#7f5af0] px-10 py-1 gap-4 flex flex-col transition duration-400 ease-in-out",
+        iconbooks: `bg-[#7f5af0] py-1 pr-2 rounded-full relative text-4xl h-14 icons-timeline transition 
+        duration-400 hover:shadow-[0px_1px_15px_#7f5af0] hover:bg-[#fff] transition duration-400 ease-in-out left-7.5`,
+        linha: "border-l-[4px] border-l-[#7f5af0] py-1 gap-4 flex flex-col transition duration-400 ease-in-out px-8 md:px-10",
         spantext: `p-3 rounded-3xl shadow-[0px_1px_20px_rgba(0,0,0,0.20)] hover:shadow-[0px_1px_15px_#7f5af0]
         text-[#000] w-40 text-center transition duration-400 ease-in-out font-bold`,
         cursoTxt: "text-2xl md:text-3xl text-[#000] transition duration-400 ease-in-out font-bold ",
@@ -76,7 +76,7 @@ const Estudo: React.FC = () => {
                         />
                     </div>
                 </div>
-                <div className="flex md:mx-15">
+                <div className="flex md:mx-15 ">
                     <div className="flex md:h-66">
                         <i className={darkMode ? claro.iconbooks : escuro.iconbooks}>📚</i>
                         <div className={darkMode ? claro.linha : escuro.linha}>
@@ -104,9 +104,9 @@ const Estudo: React.FC = () => {
                             <h3 className={darkMode ? claro.cursoTxt : escuro.cursoTxt}>
                                 Curso de Designer UI/UX (Figma)
                             </h3>
-                            <p className={darkMode ? claro.texto : escuro.texto}> Curso focado na criação de interfaces intuitivas 
-                            e experiências de usuário eficazes. Aprendi a usar o Figma para desenvolver layouts, 
-                            protótipos e sistemas de design, aplicando princípios de usabilidade e design responsivo.</p>
+                            <p className={darkMode ? claro.texto : escuro.texto}> Curso focado na criação de interfaces intuitivas
+                                e experiências de usuário eficazes. Aprendi a usar o Figma para desenvolver layouts,
+                                protótipos e sistemas de design, aplicando princípios de usabilidade e design responsivo.</p>
                         </div>
                         <IoIosAdd
                             className={darkMode ? claro.xizinho : escuro.xizinho}
@@ -126,6 +126,7 @@ const Estudo: React.FC = () => {
                             </p>
                         </div>
                     </div>
+
                 </div>
                 <div className="flex md:mx-15">
                     <div className="flex md:h-52">
@@ -136,6 +137,10 @@ const Estudo: React.FC = () => {
                             <p className={darkMode ? claro.texto : escuro.texto}>
                                 Curso complemento de JavaScript para front-end na instituição do Senac.
                             </p>
+                            <IoIosAdd
+                                className={darkMode ? claro.xizinho : escuro.xizinho}
+                                style={spinStyle}
+                            />
                         </div>
                     </div>
                 </div>
@@ -150,12 +155,20 @@ const Estudo: React.FC = () => {
                                 do Hardware até a formatação e instalação do Windows 10 </p>
                         </div>
                     </div>
+                    <IoIosAdd
+                        className={darkMode ? claro.xizinho : escuro.xizinho}
+                        style={spinStyle}
+                    />
                 </div>
                 <div className="flex md:mx-15">
                     <div className="flex ">
                         <i className={darkMode ? claro.iconbooks : escuro.iconbooks}>📚</i>
                     </div>
                 </div>
+                <IoIosAdd
+                    className={darkMode ? claro.xizinho : escuro.xizinho}
+                    style={spinStyle}
+                />
             </div>
         </main>
     )
