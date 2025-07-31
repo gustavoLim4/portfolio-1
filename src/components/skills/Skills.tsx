@@ -44,11 +44,11 @@ export const Skills: React.FC = () => {
   return (
     <main>
       <div className={darkMode ? claro.corfund : escuro.corfund}>
-        <h1 className={`${darkMode ? claro.h1Skills : escuro.h1Skills} text-3xl sm:text-4xl md:text-5xl py-10 flex justify-center`}>
+        <h1 className={`${darkMode ? claro.h1Skills : escuro.h1Skills} text-3xl sm:text-4xl md:text-5xl py-10 flex justify-center`} data-aos="zoom-in">
           Skills
         </h1>
         <Marquee speed={165} pauseOnHover={true}>
-          <div className="flex items-center gap-3 sm:gap-5 m-3 py-6 sm:py-8 md:py-10 lg:py-16">
+          <div className="flex items-center gap-3 sm:gap-5 m-3 py-6 sm:py-8 md:py-10 lg:py-16" >
             {[html, css, js, ts, react, sass, node, redux, csharp, php, mysql, wordpress, bootstrap, tailwind, figma].map((imgSrc, index) => (
               <div key={index} className={darkMode ? claro.DivImg : escuro.DivImg}>
                 <img src={imgSrc} alt={`Skill ${index}`} className={darkMode ? claro.CssImg : escuro.CssImg} />

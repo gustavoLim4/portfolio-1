@@ -1,6 +1,6 @@
 import Aprecentacao from "../../components/Apresentacao/Apresentacao"
 import Contato from "../../components/Contato/Contato"
-import Estudo from "../../components/estudos/Estudo"
+import Estudo from "../../components/Educacao/Educacao"
 import Footer from "../../components/Footer/Footer"
 import NavBar from "../../components/Navbar/NavBar"
 import Projetos from "../../components/Projetos/Projetos"

@@ -52,13 +52,13 @@ const Aprecentacao: React.FC = () => {
         <div className="w-full md:w-1/2 p-10 flex flex-col gap-4 md:gap-8">
           <div className="flex flex-col gap-1">
             <div>
-              <h1 className={`${darkMode ? claro.textColor : escuro.textColor} `}>
+              <h1 className={`${darkMode ? claro.textColor : escuro.textColor} `} data-aos="fade-right" >
                 Gustavo Lima
               </h1>
             </div>
             <div>
               {/* Mesma coisa para o segundo título */}
-              <h1 className={`${darkMode ? claro.textColor2 : escuro.textColor2} `}>
+              <h1 className={`${darkMode ? claro.textColor2 : escuro.textColor2} `} data-aos="fade-left">
                 <Typewriter
                   words={["Dev front-end"]}
                   loop={false}
@@ -72,29 +72,39 @@ const Aprecentacao: React.FC = () => {
             </div>
           </div>
 
-          <h3 className={`${darkMode ? claro.apresentar : escuro.apresentar}`}>
+          <h3 className={`${darkMode ? claro.apresentar : escuro.apresentar}`} data-aos="fade-right" >
             Olá! Bem-vindo ao meu portfólio. Sinta-se à vontade para explorar!
           </h3>
 
           <div className="flex gap-2 md:gap-5">
-            <a href="projects" className={darkMode ? claro.buttonBg : escuro.buttonBg}>
+            <a href="projects" className={darkMode ? claro.buttonBg : escuro.buttonBg}
+              data-aos="fade-down"
+              data-aos-easing="linear"
+              data-aos-duration="300">
               Projetos
             </a>
-            <a href="https://www.linkedin.com/in/gustavo-dvp/" className="flex items-end">
+            <a href="https://www.linkedin.com/in/gustavo-dvp/" className="flex items-end"
+              data-aos="fade-down"
+              data-aos-easing="linear"
+              data-aos-duration="600">
               <FaLinkedin className={darkMode ? claro.BotaosLinks : escuro.BotaosLinks} />
             </a>
-            <a href="https://github.com/gustavoLim4" className="flex items-end">
+            <a href="https://github.com/gustavoLim4" className="flex items-end"
+              data-aos="fade-down"
+              data-aos-easing="linear"
+              data-aos-duration="900">
               <FaGithub className={darkMode ? claro.BotaosLinks : escuro.BotaosLinks} />
             </a>
           </div>
         </div>
 
-        <div className="w-full md:w-1/2 flex justify-center mt-6 md:mt-0">
+        <div className="w-full md:w-1/2 flex justify-center mt-6 md:mt-0" data-aos="fade-left" data-aos-anchor-placement="bottom-bottom">
           {/* imagem menor no mobile com max-w-[200px], maior no desktop com max-w-full */}
           <img
             src={eulogo}
             alt="eu logo"
             className="float-animation max-w-[200px] md:max-w-full h-auto"
+
           />
         </div>
       </div>

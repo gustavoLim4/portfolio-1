@@ -51,7 +51,7 @@ const NavBar: React.FC = () => {
         <nav className={`transition-all duration-300 ease-in-out ${navFixo ? "fixed top-0 w-full z-50" : ""}`}>
             <div className={`${tema.bg} transition duration-300`}>
                 <div className="flex justify-between items-center px-5 md:px-10 py-5">
-                    <a href="#home" onClick={handleLinkClick}>
+                    <a href="#home" onClick={handleLinkClick} data-aos="zoom-in">
                         <img src={tema.logo} alt="Logo" className="w-40 md:w-48" />
                     </a>
 
