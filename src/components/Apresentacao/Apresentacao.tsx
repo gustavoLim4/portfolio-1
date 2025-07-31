@@ -104,7 +104,6 @@ const Aprecentacao: React.FC = () => {
             src={eulogo}
             alt="eu logo"
             className="float-animation max-w-[200px] md:max-w-full h-auto"
-
           />
         </div>
       </div>

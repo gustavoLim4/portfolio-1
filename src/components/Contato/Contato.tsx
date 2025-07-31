@@ -4,11 +4,8 @@ import { FaLinkedin, FaGithub, FaInstagramSquare } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
 
 const Contato: React.FC = () => {
-
-
     const darkMode = useSelector((state: RootState) => state.theme.darkMode);
-
-
+    
     interface Tema {
         bgcolor: string;
         formcaixao: string;
