@@ -6,7 +6,6 @@ import Cards from "./Cards/Cards";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css'; // Estilo principal do Swiper
 import useWindowWidth from "../../hooks/useWindowWidth"; // Ajuste o caminho se necessário
-
 // Suas imagens
 import TechStore from "../../img/projeto-TechStore.png";
 import FlashClean from "../../img/projeto-flashclean.png"

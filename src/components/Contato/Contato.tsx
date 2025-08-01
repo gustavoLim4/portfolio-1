@@ -43,9 +43,9 @@ const Contato: React.FC = () => {
             <div className={`${darkMode ? claro.bgcolor : escuro.bgcolor} flex-col sm:flex-row`}>
                 {/* Lado Esquerdo: Texto e ícones */}
                 <div className="w-full sm:w-1/2 py-5 sm:ml-20 px-5 flex flex-col gap-7 items-center sm:items-start text-center sm:text-left">
-                    <h1 className={darkMode ? claro.TituloCont : escuro.TituloCont} data-aos="fade-down-right" data-aos-anchor-placement="top-center">Contato</h1>
+                    <h1 className={darkMode ? claro.TituloCont : escuro.TituloCont} data-aos="fade-down-right" >Contato</h1>
                     <div className="w-full sm:w-130">
-                        <p className={darkMode ? claro.textoTR : escuro.textoTR} data-aos="zoom-in" data-aos-duration="1500" data-aos-anchor-placement="top-center">
+                        <p className={darkMode ? claro.textoTR : escuro.textoTR} data-aos="zoom-in" data-aos-duration="1500" >
                             Gostou do meu trabalho como Front-End e Designer UI/UX?
                             Entre em contato comigo para colaborações ou projetos!
                             Estou disponível para novos desafios 💬.
@@ -56,21 +56,21 @@ const Contato: React.FC = () => {
                             data-aos="fade-down"
                             data-aos-easing="linear"
                             data-aos-duration="200"
-                            data-aos-anchor-placement="top-center">
+                            >
                             <FaGithub className={darkMode ? claro.icons : escuro.icons} />
                         </a>
                         <a href="https://www.linkedin.com/in/gustavo-dvp/"
                             data-aos="fade-down"
                             data-aos-easing="linear"
                             data-aos-duration="400"
-                            data-aos-anchor-placement="top-center">
+                            >
                             <FaLinkedin className={darkMode ? claro.icons : escuro.icons} />
                         </a>
                         <a href="https://wa.me/5511944892012"
                             data-aos="fade-down"
                             data-aos-easing="linear"
                             data-aos-duration="600"
-                            data-aos-anchor-placement="top-center"
+                            
                         >
                             <IoLogoWhatsapp className={darkMode ? claro.icons : escuro.icons} />
                         </a>
@@ -78,7 +78,7 @@ const Contato: React.FC = () => {
                             data-aos="fade-down"
                             data-aos-easing="linear"
                             data-aos-duration="800"
-                            data-aos-anchor-placement="top-center">
+                            >
                             <FaInstagramSquare className={darkMode ? claro.icons : escuro.icons} />
                         </a>
                     </div>
@@ -87,9 +87,9 @@ const Contato: React.FC = () => {
                 {/* Lado Direito: Formulário */}
                 <div className="w-full sm:w-1/2 px-5">
                     <form className={darkMode ? claro.formcaixao : escuro.formcaixao}>
-                        <input type="text" placeholder="Nome :" className={darkMode ? claro.inputs : escuro.inputs} data-aos="fade-down" data-aos-duration="1800" data-aos-anchor-placement="top-center" />
-                        <input type="text" placeholder="Email :" className={darkMode ? claro.inputs : escuro.inputs} data-aos="fade-down" data-aos-duration="1000" data-aos-anchor-placement="top-center" />
-                        <textarea placeholder="Mensagem :" className={darkMode ? claro.textarea : escuro.textarea} data-aos="fade-down" data-aos-duration="500" data-aos-anchor-placement="top-center"></textarea>
+                        <input type="text" placeholder="Nome :" className={darkMode ? claro.inputs : escuro.inputs} data-aos="fade-down" data-aos-duration="1800"  />
+                        <input type="text" placeholder="Email :" className={darkMode ? claro.inputs : escuro.inputs} data-aos="fade-down" data-aos-duration="1000"  />
+                        <textarea placeholder="Mensagem :" className={darkMode ? claro.textarea : escuro.textarea} data-aos="fade-down" data-aos-duration="500" ></textarea>
                         <div className="w-full flex justify-end">
                             <button className={darkMode ? claro.btnEnv : escuro.btnEnv} data-aos="flip-left">
                                 Enviar
