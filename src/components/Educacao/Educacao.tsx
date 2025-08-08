@@ -21,8 +21,8 @@ const Estudo: React.FC = () => {
     const claro: Tema = {
         h1educacao: "text-3xl md:text-5xl py-10 flex justify-center text-[#7f5af0] transition duration-400 ease-in-out",
         bgColor: "bg-[#fff] transition duration-400 ease-in-out",
-        iconbooks: `bg-[#7f5af0] py-1 pr-2 rounded-full relative text-4xl h-14 icons-timeline transition 
-        duration-400 hover:shadow-[0px_1px_15px_#7f5af0] hover:bg-[#fff] transition duration-400 ease-in-out left-7.5`,
+        iconbooks: `bg-[#7f5af0] rounded-full relative text-4xl h-14 icons-timeline transition duration-400 
+        hover:shadow-[0px_1px_15px_#7f5af0] hover:bg-[#fff] transition duration-400 ease-in-out left-7.5 py-1 pr-2`,
         linha: "border-l-[4px] border-l-[#7f5af0] py-1 gap-4 flex flex-col transition duration-400 ease-in-out px-8 md:px-10",
         spantext: `p-3 rounded-3xl shadow-[0px_1px_20px_rgba(0,0,0,0.20)] hover:shadow-[0px_1px_15px_#7f5af0]
         text-[#000] w-40 text-center transition duration-400 ease-in-out font-bold`,
@@ -33,8 +33,8 @@ const Estudo: React.FC = () => {
     const escuro: Tema = {
         h1educacao: "text-5xl py-7 flex justify-center text-[#0400ff] transition duration-400 ease-in-out",
         bgColor: "bg-[#1f1f1f] transition duration-400 ease-in-out",
-        iconbooks: `bg-[#0400ff] py-1 pr-2 rounded-full relative left-7.5 text-4xl h-14 icons-timeline transition 
-        duration-400 hover:shadow-[0px_1px_15px_#7f5af0] hover:bg-[#fff] transition duration-400 ease-in-out `,
+        iconbooks: `bg-[#0400ff] rounded-full relative left-7.5 text-4xl h-14 icons-timeline transition 
+        duration-400 hover:shadow-[0px_1px_15px_#7f5af0] hover:bg-[#fff] transition duration-400 ease-in-out py-1 pr-2 `,
         linha: "border-l-[4px] border-l-[#0400ff] px-10 py-1 gap-5 flex flex-col transition duration-400 ease-in-out",
         spantext: `p-3 rounded-3xl shadow-[0px_1px_20px_rgba(255,255,255,0.10)] hover:shadow-[0px_1px_15px_#0400ff]
         text-[#fff] w-40 text-center transition duration-400 ease-in-out font-bold bg-[#0000006e]`,
