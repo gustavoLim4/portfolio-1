@@ -58,10 +58,10 @@ const Estudo: React.FC = () => {
         `}
             </style>
             <div className={darkMode ? claro.bgColor : escuro.bgColor}>
-                <h1 className={darkMode ? claro.h1educacao : escuro.h1educacao} data-aos="zoom-in" data-aos-anchor-placement="center-bottom">Educação</h1>
+                <h1 className={darkMode ? claro.h1educacao : escuro.h1educacao} data-aos-anchor-placement="center-bottom">Educação</h1>
                 <div className="flex md:mx-15">
                     <div className="flex md:h-66">
-                        <i className={darkMode ? claro.iconbooks : escuro.iconbooks} data-aos="zoom-in" data-aos-easing="linear" data-aos-anchor-placement="top-center">📚</i>
+                        <i className={darkMode ? claro.iconbooks : escuro.iconbooks}>📚</i>
                         <div className={darkMode ? claro.linha : escuro.linha}>
                             <span className={darkMode ? claro.spantext : escuro.spantext}>2025 - Cursando </span>
                             <h3 className={darkMode ? claro.cursoTxt : escuro.cursoTxt}>Analise e Desenvolvimento de Sistemas.</h3>
@@ -78,7 +78,7 @@ const Estudo: React.FC = () => {
                 </div>
                 <div className="flex md:mx-15 ">
                     <div className="flex md:h-66">
-                        <i className={darkMode ? claro.iconbooks : escuro.iconbooks} data-aos="zoom-in" data-aos-easing="linear" data-aos-anchor-placement="top-center">📚</i>
+                        <i className={darkMode ? claro.iconbooks : escuro.iconbooks} >📚</i>
                         <div className={darkMode ? claro.linha : escuro.linha}>
                             <span className={darkMode ? claro.spantext : escuro.spantext}>2025 - Cursando </span>
                             <h3 className={darkMode ? claro.cursoTxt : escuro.cursoTxt}>
@@ -98,7 +98,7 @@ const Estudo: React.FC = () => {
                 </div>
                 <div className="flex md:mx-15">
                     <div className="flex md:h-66">
-                        <i className={darkMode ? claro.iconbooks : escuro.iconbooks} data-aos="zoom-in" data-aos-easing="linear" data-aos-anchor-placement="top-center">📚</i>
+                        <i className={darkMode ? claro.iconbooks : escuro.iconbooks} >📚</i>
                         <div className={darkMode ? claro.linha : escuro.linha}>
                             <span className={darkMode ? claro.spantext : escuro.spantext}>2025 - Cursando </span>
                             <h3 className={darkMode ? claro.cursoTxt : escuro.cursoTxt}>
@@ -116,7 +116,7 @@ const Estudo: React.FC = () => {
                 </div>
                 <div className="flex md:mx-15">
                     <div className="flex md:h-66">
-                        <i className={darkMode ? claro.iconbooks : escuro.iconbooks} data-aos="zoom-in" data-aos-easing="linear" data-aos-anchor-placement="top-center">📚</i>
+                        <i className={darkMode ? claro.iconbooks : escuro.iconbooks} >📚</i>
                         <div className={darkMode ? claro.linha : escuro.linha}>
                             <span className={darkMode ? claro.spantext : escuro.spantext}>2022 - 2024</span>
                             <h3 className={darkMode ? claro.cursoTxt : escuro.cursoTxt}>Técnico da informação.</h3>
@@ -130,7 +130,7 @@ const Estudo: React.FC = () => {
                 </div>
                 <div className="flex md:mx-15">
                     <div className="flex md:h-52">
-                        <i className={darkMode ? claro.iconbooks : escuro.iconbooks} data-aos="zoom-in" data-aos-easing="linear" data-aos-anchor-placement="top-center">📚</i>
+                        <i className={darkMode ? claro.iconbooks : escuro.iconbooks} >📚</i>
                         <div className={darkMode ? claro.linha : escuro.linha}>
                             <span className={darkMode ? claro.spantext : escuro.spantext}>2024 - 2024</span>
                             <h3 className={darkMode ? claro.cursoTxt : escuro.cursoTxt}>Desenvolvimento front-end em JS.</h3>
@@ -146,7 +146,7 @@ const Estudo: React.FC = () => {
                 </div>
                 <div className="flex md:mx-15">
                     <div className="flex md:h-52">
-                        <i className={darkMode ? claro.iconbooks : escuro.iconbooks} data-aos="zoom-in" data-aos-easing="linear" data-aos-anchor-placement="top-center">📚</i>
+                        <i className={darkMode ? claro.iconbooks : escuro.iconbooks} >📚</i>
                         <div className={darkMode ? claro.linha : escuro.linha}>
                             <span className={darkMode ? claro.spantext : escuro.spantext}>2024 - 2024</span>
                             <h3 className={darkMode ? claro.cursoTxt : escuro.cursoTxt}>Montagem e Formatação de Computadores.</h3>
@@ -162,7 +162,7 @@ const Estudo: React.FC = () => {
                 </div>
                 <div className="flex md:mx-15">
                     <div className="flex ">
-                        <i className={darkMode ? claro.iconbooks : escuro.iconbooks} data-aos="zoom-in" data-aos-easing="linear" data-aos-anchor-placement="top-center">📚</i>
+                        <i className={darkMode ? claro.iconbooks : escuro.iconbooks} >📚</i>
                     </div>
                 </div>
                 <IoIosAdd

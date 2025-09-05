@@ -89,7 +89,7 @@ const Projetos: React.FC = () => {
 
                         {/* --- CARROSSEL 2 --- */}
                         <Swiper {...carouselSettings} style={{padding:`17px 0px`}}>
-                            <SwiperSlide>
+                            <SwiperSlide>   
                                 <Cards
                                     rota="https://romacortinas.com.br"
                                     imagem={RomaCortinas}

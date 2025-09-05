@@ -2,10 +2,45 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../store/redux";
 import { FaLinkedin, FaGithub, FaInstagramSquare } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
+import { useState } from "react";
+import emailjs from "@emailjs/browser"
 
 const Contato: React.FC = () => {
     const darkMode = useSelector((state: RootState) => state.theme.darkMode);
-    
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [mensagemTexto, setMensagemTexto] = useState("");
+    // Mensagem de erro no formulario
+    const [message, setMessage] = useState('')
+    const [tipoMensagem, setTipoMensagem] = useState("")
+
+
+    function sendEmail(e: { preventDefault: () => void; }) {
+        e.preventDefault()
+        if (name === '' || email === '' || mensagemTexto === '') {
+            setTipoMensagem("erro");
+            setMessage("❌ Por favor, preencha todos os campos!");
+            return;
+        }
+        const templateParams = {
+            from_name: name,
+            message: mensagemTexto,
+            email: email
+        }
+        emailjs.send("service_3ddpoka", "template_e2cp93h", templateParams, "TgVPCW9o4P00gnSE-")
+            .then((res) => {
+                console.log("EMAIL-ENVIADO", res.status, res.text)
+                setTipoMensagem("sucesso");
+                setMessage("✅ Formulário enviado com sucesso!");
+                setName('')
+                setEmail('')
+                setMensagemTexto('')
+            }, (error) => {
+                console.log("ERRO", error)
+            })
+
+    }
+
     interface Tema {
         bgcolor: string;
         formcaixao: string;
@@ -56,21 +91,21 @@ const Contato: React.FC = () => {
                             data-aos="fade-down"
                             data-aos-easing="linear"
                             data-aos-duration="200"
-                            >
+                        >
                             <FaGithub className={darkMode ? claro.icons : escuro.icons} />
                         </a>
                         <a href="https://www.linkedin.com/in/gustavo-dvp/"
                             data-aos="fade-down"
                             data-aos-easing="linear"
                             data-aos-duration="400"
-                            >
+                        >
                             <FaLinkedin className={darkMode ? claro.icons : escuro.icons} />
                         </a>
                         <a href="https://wa.me/5511944892012"
                             data-aos="fade-down"
                             data-aos-easing="linear"
                             data-aos-duration="600"
-                            
+
                         >
                             <IoLogoWhatsapp className={darkMode ? claro.icons : escuro.icons} />
                         </a>
@@ -78,20 +113,32 @@ const Contato: React.FC = () => {
                             data-aos="fade-down"
                             data-aos-easing="linear"
                             data-aos-duration="800"
-                            >
+                        >
                             <FaInstagramSquare className={darkMode ? claro.icons : escuro.icons} />
                         </a>
                     </div>
                 </div>
-
                 {/* Lado Direito: Formulário */}
                 <div className="w-full sm:w-1/2 px-5">
-                    <form className={darkMode ? claro.formcaixao : escuro.formcaixao}>
-                        <input type="text" placeholder="Nome :" className={darkMode ? claro.inputs : escuro.inputs} data-aos="fade-down" data-aos-duration="1800"  />
-                        <input type="text" placeholder="Email :" className={darkMode ? claro.inputs : escuro.inputs} data-aos="fade-down" data-aos-duration="1000"  />
-                        <textarea placeholder="Mensagem :" className={darkMode ? claro.textarea : escuro.textarea} data-aos="fade-down" data-aos-duration="500" ></textarea>
+                    <form className={darkMode ? claro.formcaixao : escuro.formcaixao} onSubmit={sendEmail}>
+                        <input type="text" placeholder="Nome :" onChange={(e) => setName(e.target.value)} value={name} className={darkMode ? claro.inputs : escuro.inputs} data-aos="fade-down" data-aos-duration="1800" />
+                        <input type="text" placeholder="Email :" onChange={(e) => setEmail(e.target.value)} value={email} className={darkMode ? claro.inputs : escuro.inputs} data-aos="fade-down" data-aos-duration="1000" />
+                        <textarea placeholder="Mensagem :" onChange={(e) => setMensagemTexto(e.target.value)} value={mensagemTexto} className={darkMode ? claro.textarea : escuro.textarea} data-aos="fade-down" data-aos-duration="500" ></textarea>
+                        {/* Mensagem dinâmica */}
+                        {message && (
+                            <div className="flex justify-center w-full">
+                                <p
+                                    className={`mt-1 p-2 rounded  ${tipoMensagem === "erro"
+                                        ? "bg-red-100 text-red-700"
+                                        : "bg-green-100 text-green-800"
+                                        }`}
+                                >
+                                    {message}
+                                </p>
+                            </div>
+                        )}
                         <div className="w-full flex justify-end">
-                            <button className={darkMode ? claro.btnEnv : escuro.btnEnv} data-aos="flip-left">
+                            <button className={darkMode ? claro.btnEnv : escuro.btnEnv} data-aos="flip-left" type="submit" value="Enivar">
                                 Enviar
                             </button>
                         </div>
