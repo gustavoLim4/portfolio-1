@@ -16,6 +16,11 @@ import ListaTarefas from "../../img/Lista-Tarefas.png"
 import CalculoIMC from "../../img/Calculo-IMC.png"
 import Vava from "../../img/Vava.png"
 import CafeDeOuro from "../../img/CafeDeOuro.png"
+import Elus from "../../img/Elus.png"
+import cabeloCliente from "../../img/barber-clien.png"
+import Mova from "../../img/Mova.png"
+
+
 
 const Projetos: React.FC = () => {
     const darkMode = useSelector((state: RootState) => state.theme.darkMode);
@@ -57,7 +62,7 @@ const Projetos: React.FC = () => {
                     // VERSÃO MOBILE (3 CARROSSELS)
                     <div className="w-full overflow-hidden">
                         {/* --- CARROSSEL 1 --- */}
-                        <Swiper {...carouselSettings} style={{padding:`17px 0px`}}>
+                        <Swiper {...carouselSettings} style={{ padding: `17px 0px` }}>
                             <SwiperSlide >
                                 <Cards
                                     rota="https://flashclean.com.br"
@@ -88,8 +93,8 @@ const Projetos: React.FC = () => {
                         </Swiper>
 
                         {/* --- CARROSSEL 2 --- */}
-                        <Swiper {...carouselSettings} style={{padding:`17px 0px`}}>
-                            <SwiperSlide>   
+                        <Swiper {...carouselSettings} style={{ padding: `17px 0px` }}>
+                            <SwiperSlide>
                                 <Cards
                                     rota="https://romacortinas.com.br"
                                     imagem={RomaCortinas}
@@ -117,9 +122,44 @@ const Projetos: React.FC = () => {
                                 />
                             </SwiperSlide>
                         </Swiper>
-
                         {/* --- CARROSSEL 3 --- */}
-                        <Swiper {...carouselSettings} style={{padding:`17px 0px`}}>
+                        <Swiper {...carouselSettings} style={{ padding: `17px 0px` }}>
+                            <SwiperSlide>
+                                <Cards
+                                    rota="https://www.figma.com/proto/D4WzvpUAVDUjlkTyDXvYvC/Move?node-id=10-2&p=f&t=Hd2ZiOYRFOolGDfv-1&scaling=min-zoom&content-scaling=fixed&page-id=4%3A237&starting-point-node-id=10%3A2"
+                                    imagem={Mova}
+                                    titulo="Mova Mudanças"
+                                    descricao="Protótipo desenvolvido durante um curso de UI/UX, com o objetivo de aprender e praticar conceitos de design e experiência do usuário. O projeto representa uma empresa de mudanças, criado como parte do aprendizado prático para aprimorar minhas habilidades em prototipagem."
+                                    tecnologias={["Html", "Css", "Figma", "Designer UI/UX", "Prototype"]}
+                                />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Cards
+                                    rota="https://gustavolim4.github.io/Barbearia-Clien"
+                                    imagem={cabeloCliente}
+                                    titulo="Barbeiro cliente"
+                                    descricao="Criei o protótipo no Figma e depois desenvolvi o layout em HTML e CSS para 
+                                    treinar e fortalecer meus conhecimentos em estruturação e estilização de interfaces. 
+                                    O projeto simula uma landing page moderna de barbearia."
+                                    tecnologias={["Html", "Css", "Figma", "Designer UI/UX", "Prototype"]}
+                                />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Cards
+                                    rota="https://www.figma.com/proto/Dw0pJM6iQXn9jfL5BliMgp/Site-Elus?page-id=0%3A1&node-id=1-2&p=f&viewport=321%2C63%2C0.15&t=wtleEhnja18Mt5xT-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A2"
+                                    imagem={Elus}
+                                    titulo="Grupo Elus"
+                                    descricao="Projeto freelance criado como proposta de redesign para uma empresa onde desejo trabalhar.
+                                    Desenvolvi um protótipo de refatoração do site atual, com foco em melhorar o visual,
+                                    a navegação e a experiência do usuário."
+                                    tecnologias={["Figma", "Designer UI/UX", "Prototype"]}
+                                />
+                            </SwiperSlide>
+                        </Swiper>
+
+
+                        {/* --- CARROSSEL 4--- */}
+                        <Swiper {...carouselSettings} style={{ padding: `17px 0px` }}>
                             <SwiperSlide>
                                 <Cards
                                     rota="https://gustavolim4.github.io/Valorante/"
@@ -216,6 +256,36 @@ const Projetos: React.FC = () => {
                                 tecnologias={["Html", "Css", "JavaScript", "Responsivo"]}
                             />
                         </div>
+                        <div className="flex gap-5 w-full mb-5 justify-center ">
+                            <Cards
+                                rota="https://www.figma.com/proto/D4WzvpUAVDUjlkTyDXvYvC/Move?node-id=10-2&p=f&t=Hd2ZiOYRFOolGDfv-1&scaling=min-zoom&content-scaling=fixed&page-id=4%3A237&starting-point-node-id=10%3A2"
+                                imagem={Mova}
+                                titulo="Mova mudanças"
+                                descricao="Protótipo desenvolvido durante um curso de UI/UX, com o objetivo de aprender
+                                e praticar conceitos de design e experiência do usuário. 
+                                O projeto representa uma empresa de mudanças, criado como parte do
+                                 aprendizado prático para aprimorar minhas habilidades em prototipagem."
+                                tecnologias={["Figma", "Designer UI/UX", "Prototype"]}
+                            />
+                            <Cards
+                                rota="https://gustavolim4.github.io/Barbearia-Clien"
+                                imagem={cabeloCliente}
+                                titulo="Barbeiro cliente"
+                                descricao="Criei o protótipo no Figma e depois desenvolvi o layout em HTML e CSS para 
+                                treinar e fortalecer meus conhecimentos em estruturação e estilização de interfaces. 
+                                O projeto simula uma landing page moderna de barbearia."
+                                tecnologias={["Html", "Css", "Figma", "Designer UI/UX", "Prototype"]}
+                            />
+                            <Cards
+                                rota="https://www.figma.com/proto/Dw0pJM6iQXn9jfL5BliMgp/Site-Elus?page-id=0%3A1&node-id=1-2&p=f&viewport=321%2C63%2C0.15&t=wtleEhnja18Mt5xT-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A2"
+                                imagem={Elus}
+                                titulo="Grupo Elus instrumentação"
+                                descricao="Projeto freelance criado como proposta de redesign para uma empresa onde desejo trabalhar.
+                                Desenvolvi um protótipo de refatoração do site atual, com foco em melhorar o visual,
+                                a navegação e a experiência do usuário."
+                                tecnologias={["Figma", "Designer UI/UX", "Prototype"]}
+                            />
+                        </div>
                         <div className="flex gap-5 w-full justify-center ">
                             <Cards
                                 rota="https://gustavolim4.github.io/Valorante/"
@@ -247,6 +317,7 @@ const Projetos: React.FC = () => {
                                 tecnologias={["Html", "Css", "JavaScript",]}
                             />
                         </div>
+
                     </div>
                 )}
             </div>
