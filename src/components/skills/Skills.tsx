@@ -16,6 +16,8 @@ import bootstrap from "../../img/bootstrap.png";
 import tailwind from "../../img/tailwinds.png";
 import figma from "../../img/figma.png";
 import wordpress from "../../img/wordpress.png";
+import Mui from "../../img/Mui.png";
+
 
 export const Skills: React.FC = () => {
   const darkMode = useSelector((state: RootState) => state.theme.darkMode);
@@ -49,7 +51,7 @@ export const Skills: React.FC = () => {
         </h1>
         <Marquee speed={165} pauseOnHover={true}>
           <div className="flex items-center gap-3 sm:gap-5 m-3 py-6 sm:py-8 md:py-10 lg:py-16" >
-            {[html, css, js, ts, react, sass, node, redux, csharp, php, mysql, wordpress, bootstrap, tailwind, figma].map((imgSrc, index) => (
+            {[html, css, js, ts, react, sass, node, redux, csharp, php, mysql, wordpress, bootstrap, tailwind, figma, Mui].map((imgSrc, index) => (
               <div key={index} className={darkMode ? claro.DivImg : escuro.DivImg}>
                 <img src={imgSrc} alt={`Skill ${index}`} className={darkMode ? claro.CssImg : escuro.CssImg} />
               </div>
