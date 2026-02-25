@@ -77,7 +77,7 @@ const Aprecentacao: React.FC = () => {
           </h3>
 
           <div className="flex gap-2 md:gap-5">
-            <a href="projects" className={darkMode ? claro.buttonBg : escuro.buttonBg}
+            <a href="#projetos" className={darkMode ? claro.buttonBg : escuro.buttonBg}
               data-aos="fade-down"
               data-aos-easing="linear"
               data-aos-duration="300">

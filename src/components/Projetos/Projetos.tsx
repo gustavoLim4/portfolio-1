@@ -1,12 +1,9 @@
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/redux";
 import Cards from "./Cards/Cards";
-
-// 1. Importações do Swiper e do nosso hook
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css'; // Estilo principal do Swiper
-import useWindowWidth from "../../hooks/useWindowWidth"; // Ajuste o caminho se necessário
-// Suas imagens
+import 'swiper/css';
+import useWindowWidth from "../../hooks/useWindowWidth";
 import TechStore from "../../img/projeto-TechStore.png";
 import FlashClean from "../../img/projeto-flashclean.png"
 import Athetic from "../../img/projeto-Athetic.png"
@@ -19,13 +16,15 @@ import CafeDeOuro from "../../img/CafeDeOuro.png"
 import Elus from "../../img/Elus.png"
 import cabeloCliente from "../../img/barber-clien.png"
 import Mova from "../../img/Mova.png"
+import intranetArena from "../../img/intranetArena.png"
+import arenaWordpres from "../../img/arenaWordpres.png"
+import Zynex from "../../img/ZynexCode.png"
 
 
 
 const Projetos: React.FC = () => {
     const darkMode = useSelector((state: RootState) => state.theme.darkMode);
 
-    // 2. Usando o hook para determinar se é mobile
     const windowWidth = useWindowWidth();
     const isMobile = windowWidth <= 768;
 
@@ -42,8 +41,6 @@ const Projetos: React.FC = () => {
         h1projetos: "text-5xl py-20 flex justify-center text-[#0400ff] transition duration-400 ease-in-out",
     }
 
-    // 3. Configurações para os carrossels no mobile
-    // Usamos slidesPerView > 1 para mostrar que há mais conteúdo para deslizar
     const carouselSettings = {
         slidesPerView: 1.2,
         spaceBetween: 15,
@@ -57,11 +54,45 @@ const Projetos: React.FC = () => {
                     Projetos
                 </h1>
 
-                {/* 4. Lógica de Renderização Condicional */}
                 {isMobile ? (
-                    // VERSÃO MOBILE (3 CARROSSELS)
                     <div className="w-full overflow-hidden">
-                        {/* --- CARROSSEL 1 --- */}
+                        <Swiper {...carouselSettings} style={{ padding: `17px 0px` }}>
+                            <SwiperSlide >
+                                <Cards
+                                    rota="https://intranet.arenavidros.com.br"
+                                    imagem={intranetArena}
+                                    titulo="Intranet Arena Vidros"
+                                    descricao="Intranet corporativa desenvolvida do zero até a produção.
+                                    Conta com ouvidoria, comunicação interna, inventário e chamados de TI,
+                                    além de funcionalidades que agilizam processos e otimizam o trabalho."
+                                    tecnologias={["React", "TypeScript", "Redux", "Mui material", "PHP",]}
+                                />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Cards
+                                    rota="https://wordpress.arenavidros.com.br"
+                                    imagem={arenaWordpres}
+                                    titulo="Arena auto vidros LTDA"
+                                    descricao="Site institucional em WordPress para apresentação da empresa.
+                                    Realizei refatoração na estrutura e no layout, melhorando organização,
+                                    desempenho e responsividade, garantindo navegação mais moderna."
+                                    tecnologias={["WordPress", "Elementor Pro", "Figma", "UI/UX"]}
+                                />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Cards
+                                    rota="https://zynexcode.com"
+                                    imagem={Zynex}
+                                    titulo="Zynex Code LTDA"
+                                    descricao="Empresa de tecnologia onde fui convidado para atuar
+                                    em projetos de desenvolvimento. Trabalho com foco em front-end
+                                    e UI/UX, criando interfaces modernas e responsivas, aplicando
+                                    boas práticas e organização no desenvolvimento das aplicações."
+                                    tecnologias={["React", "TypeScript", "Mui material", "Figma", "EmailJS"]}
+                                />
+                            </SwiperSlide>
+                        </Swiper>
+
                         <Swiper {...carouselSettings} style={{ padding: `17px 0px` }}>
                             <SwiperSlide >
                                 <Cards
@@ -92,7 +123,6 @@ const Projetos: React.FC = () => {
                             </SwiperSlide>
                         </Swiper>
 
-                        {/* --- CARROSSEL 2 --- */}
                         <Swiper {...carouselSettings} style={{ padding: `17px 0px` }}>
                             <SwiperSlide>
                                 <Cards
@@ -122,7 +152,6 @@ const Projetos: React.FC = () => {
                                 />
                             </SwiperSlide>
                         </Swiper>
-                        {/* --- CARROSSEL 3 --- */}
                         <Swiper {...carouselSettings} style={{ padding: `17px 0px` }}>
                             <SwiperSlide>
                                 <Cards
@@ -158,7 +187,6 @@ const Projetos: React.FC = () => {
                         </Swiper>
 
 
-                        {/* --- CARROSSEL 4--- */}
                         <Swiper {...carouselSettings} style={{ padding: `17px 0px` }}>
                             <SwiperSlide>
                                 <Cards
@@ -190,8 +218,42 @@ const Projetos: React.FC = () => {
                         </Swiper>
                     </div>
                 ) : (
-                    // VERSÃO DESKTOP (SEU CÓDIGO ORIGINAL)
+
                     <div className="mx-100">
+                        <div className="flex gap-5 w-full mb-5 justify-center">
+                            <Cards
+                                rota="https://intranet.arenavidros.com.br"
+                                imagem={intranetArena}
+                                titulo="Intranet Arena Vidros"
+                                descricao="Intranet corporativa da empresa onde atuo atualmente,
+                                desenvolvida do zero até a produção de forma solo. Possui canal de
+                                ouvidoria, comunicação interna, inventário e chamados de TI,
+                                além de diversas funcionalidades que agilizam os processos
+                                e otimizam o trabalho."
+                                tecnologias={["React", "TypeScript", "Redux", "Mui material", "PHP", "MySql",]}
+                            />
+                            <Cards
+                                rota="https://wordpress.arenavidros.com.br"
+                                imagem={arenaWordpres}
+                                titulo="Arena auto vidros LTDA"
+                                descricao="Site institucional desenvolvido em WordPress para
+                                apresentar a empresa e seus serviços. Realizei uma refatoração
+                                na estrutura e no layout, melhorando organização, desempenho
+                                e responsividade, entregando uma navegação mais moderna."
+                                tecnologias={["WordPress", "Elementor Pro", "Figma", "UI/UX"]}
+                            />
+                            <Cards
+                                rota="https://zynexcode.com"
+                                imagem={Zynex}
+                                titulo="Zynex Code LTDA"
+                                descricao="Empresa de tecnologia onde fui convidado para atuar
+                                em projetos de desenvolvimento. Trabalho com foco em front-end
+                                e UI/UX, criando interfaces modernas e responsivas, aplicando
+                                boas práticas e organização no desenvolvimento das aplicações."
+                                tecnologias={["React", "TypeScript", "Mui material", "Figma", "EmailJS"]}
+                            />
+                        </div>
+
                         <div className="flex gap-5 w-full mb-5 justify-center">
                             <Cards
                                 rota="https://flashclean.com.br"

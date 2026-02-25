@@ -102,6 +102,28 @@ const Estudo: React.FC = () => {
                         <div className={darkMode ? claro.linha : escuro.linha}>
                             <span className={darkMode ? claro.spantext : escuro.spantext}>2025 - Cursando </span>
                             <h3 className={darkMode ? claro.cursoTxt : escuro.cursoTxt}>
+                                Active Directory / GPO
+                            </h3>
+                            <p className={darkMode ? claro.texto : escuro.texto}>
+                                Curso focado na instalação e configuração do Windows Server 2019,
+                                criação de domínio Windows e controlador de domínio. Estou aprendendo a
+                                criar e gerenciar GPOs para aplicar políticas de segurança,
+                                restringir acessos, bloquear ações no sistema e proteger estações
+                                contra riscos e uso indevido.
+                            </p>
+                        </div>
+                        <IoIosAdd
+                            className={darkMode ? claro.xizinho : escuro.xizinho}
+                            style={spinStyle}
+                        />
+                    </div>
+                </div>
+                <div className="flex md:mx-15">
+                    <div className="flex md:h-66">
+                        <i className={darkMode ? claro.iconbooks : escuro.iconbooks} >📚</i>
+                        <div className={darkMode ? claro.linha : escuro.linha}>
+                            <span className={darkMode ? claro.spantext : escuro.spantext}>2025 - 2025 </span>
+                            <h3 className={darkMode ? claro.cursoTxt : escuro.cursoTxt}>
                                 Curso de Designer UI/UX (Figma)
                             </h3>
                             <p className={darkMode ? claro.texto : escuro.texto}> Curso focado na criação de interfaces intuitivas
