@@ -38,7 +38,7 @@ const Cards: React.FC<CardsProps> = ({ titulo, descricao, imagem, tecnologias, r
     return (
         <main>
             <div className={`rounded-lg hover:-translate-y-2 ${bgColor}`} onClick={handleClick} >
-                <img src={imagem} alt={titulo} className="rounded-md w-full h-44 sm:h-48 md:h-5" />
+                <img src={imagem} alt={titulo} className="rounded-md w-full h-44 sm:h-48 md:h-50" />
                 <div className="p-3 flex flex-col justify-between">
                     <h1 className={`text-xl font-bold mb-1 ${tituloCor}`}>{titulo}</h1>
                     <p className="text-justify text-sm mb-3 md:w-93 h-30 md:h-25">{descricao}</p>
