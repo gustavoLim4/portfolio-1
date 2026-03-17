@@ -70,7 +70,7 @@ const Projetos: React.FC = () => {
                             </SwiperSlide>
                             <SwiperSlide>
                                 <Cards
-                                    rota="https://wordpress.arenavidros.com.br"
+                                    rota="https://arenavidros.com.br"
                                     imagem={arenaWordpres}
                                     titulo="Arena auto vidros LTDA"
                                     descricao="Site institucional em WordPress para apresentação da empresa.
@@ -105,7 +105,7 @@ const Projetos: React.FC = () => {
                             </SwiperSlide>
                             <SwiperSlide>
                                 <Cards
-                                    rota=""
+                                    rota="https://techstore-steel.vercel.app/"
                                     imagem={TechStore}
                                     titulo="Tech Store"
                                     descricao="Projeto acadêmico de e-commerce criado durante a faculdade, com foco na venda de iPhones, notebooks e fones de ouvido. Desenvolvi todo o front-end com design responsivo e navegação intuitiva. O projeto foi avaliado com nota máxima."
@@ -114,7 +114,7 @@ const Projetos: React.FC = () => {
                             </SwiperSlide>
                             <SwiperSlide>
                                 <Cards
-                                    rota=""
+                                    rota="https://github.com/vitor575/athletic-force"
                                     imagem={Athetic}
                                     titulo="Athetic Force"
                                     descricao="Sistema de academia criado como projeto prático em grupo para aprendizado de novas tecnologias. Desenvolvemos uma plataforma com foco em funcionalidades como cadastro de treinos, agenda e acompanhamento do desempenho dos alunos."
@@ -233,7 +233,7 @@ const Projetos: React.FC = () => {
                                 tecnologias={["React", "TypeScript", "Redux", "Mui material", "PHP", "MySql",]}
                             />
                             <Cards
-                                rota="https://wordpress.arenavidros.com.br"
+                                rota="https://arenavidros.com.br"
                                 imagem={arenaWordpres}
                                 titulo="Arena auto vidros LTDA"
                                 descricao="Site institucional desenvolvido em WordPress para
@@ -266,7 +266,7 @@ const Projetos: React.FC = () => {
                                 tecnologias={["Wordpress", "Elementor Pro", "WooCommerce", "CSS",]}
                             />
                             <Cards
-                                rota=""
+                                rota="https://techstore-steel.vercel.app/"
                                 imagem={TechStore}
                                 titulo="Tech Store"
                                 descricao="Projeto acadêmico de e-commerce criado durante 
@@ -276,7 +276,7 @@ const Projetos: React.FC = () => {
                                 tecnologias={["Html", "Css", "Scss", "JavaScript", "Figma", "Designer UI/UX"]}
                             />
                             <Cards
-                                rota=""
+                                rota="https://github.com/vitor575/athletic-force"
                                 imagem={Athetic}
                                 titulo="Athetic Force"
                                 descricao="Sistema de academia criado como projeto prático em grupo 
